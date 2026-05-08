@@ -1,0 +1,151 @@
+[{
+    "id": 1,
+    "name": "Atlantic Croaker",
+    "minWEIGHT": 1,
+    "maxWEIGHT": 2,
+    "rarity": "COMMON"
+
+},
+{
+    "id": 2,
+    "name":"Florida Pompano",
+    "minWEIGHT": 1,
+    "maxWEIGHT": 3,
+    "rarity": "COMMON"
+},
+{
+    "id": 3,
+    "name": "Black Sea Bass",
+    "minWEIGHT": 1,
+    "maxWEIGHT": 4,
+    "rarity": "COMMON"
+},
+{
+    "id": 4,
+    "name": "Spotted Seatrout" ,
+    "minWEIGHT": 1,
+    "maxWEIGHT": 5,
+    "rarity": "COMMON"
+},
+{
+    "id": 5,
+    "name": "Sheepshead",
+    "minWEIGHT": 2,
+    "maxWEIGHT": 6,
+    "rarity": "COMMON"
+},
+{
+    "id": 6,
+    "name": "Bluefish",
+    "minWEIGHT": 3,
+    "maxWEIGHT": 7,
+    "rarity": "COMMON"
+},
+{
+    "id": 7,
+    "name": "GraySnapper",
+    "minWEIGHT": 3,
+    "maxWEIGHT": 8,
+    "rarity": "COMMON"
+},
+{
+    "id": 8,
+    "name": "Atlantic Salmon",
+    "minWEIGHT": 5,
+    "maxWEIGHT": 12,
+    "rarity": "RARE"
+},
+{
+    "id": 9,
+    "name": "Red Grouper",
+    "minWEIGHT": 5,
+    "maxWEIGHT": 15,
+    "rarity": "RARE"
+},
+{
+    "id": 10,
+    "name": "Dolphinfish",
+    "minWEIGHT": 5,
+    "maxWEIGHT": 25,
+    "rarity": "RARE" 
+},
+{
+    "id": 11,
+    "name": "Cobia",
+    "minWEIGHT": 10,
+    "maxWEIGHT": 40,
+    "rarity":"RARE" 
+},
+{
+    "id": 12,
+    "name": "Red Drum Redfish" ,
+    "minWEIGHT": 20,
+    "maxWEIGHT": 40,
+    "rarity":"EPIC"
+},
+{
+    "id": 13,
+    "name": "Yellowfin Tuna",
+    "minWEIGHT": 20,
+    "maxWEIGHT": 100,
+    "rarity": "EPIC"
+},
+{
+    "id": 14,
+    "name": "Amberjack",
+    "minWEIGHT": 40,
+    "maxWEIGHT": 100,
+    "rarity": "EPIC" 
+},
+{
+    "id": 15,
+    "name": "Atlantic Tarpon" ,
+    "minWEIGHT": 40,
+    "maxWEIGHT": 150,
+    "rarity": "EPIC"
+},
+{
+    "id": 16,
+    "name": "Swordfish",
+    "minWEIGHT": 150,
+    "maxWEIGHT": 500,
+    "rarity": "Mythic"
+},
+{
+    "id": 17,
+    "name": "Blue Marlon",
+    "minWEIGHT": 300,
+    "maxWEIGHT": 800,
+    "rarity": "Mythic"
+},
+{
+    "id": 18,
+    "name": "Bluefin Tuna",
+    "minWEIGHT": 500,
+    "maxWEIGHT": 1000,
+    "rarity": "Mythic"
+},
+{
+    "id": 19,
+    "name": "Black Marlon" ,
+    "minWEIGHT": 800,
+    "maxWEIGHT": 1500,
+    "rarity": "Legendary"
+},
+{
+    "id": 20,
+    "name": "Great White Shark",
+    "minWEIGHT": 1500,
+    "maxWEIGHT": 3000,
+    "rarity": "Legendary" 
+},
+{
+    "id": 21,
+    "name": "Megalodon",
+    "minWEIGHT": 65000,
+    "maxWEIGHT": 145000,
+    "rarity": "Monarch"
+
+}
+
+]
