@@ -57,7 +57,7 @@
 "description": "An octopus? Or is it a lightbulb?",
 "price": 75000,
 "bait": "squid",
-"luck_multiplier": 3.5,
+"luck_multiplier": 3.5
 },
 
 {
@@ -65,5 +65,5 @@
 "description": "The king of all lobsters, it a delicacy that is only served in the finest restaurants.",
 "price": 1000000,
 "bait": "golden_lobster",
-"luck_multiplier": 10.0,
+"luck_multiplier": 10.0
 }]
