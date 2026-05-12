@@ -3,12 +3,11 @@ fishDICT = open("./fishDICT.json", encoding="utf8")
 data = json.load(fishDICT)
 
 import random
+import math
 class calculator():
-    def mult(x,y):
-        print(x*y)
-        return(x*y)
-    def prob(x):
-        print(x/1)
+    def mult(numbers):
+        print(math.prod(numbers))
+        
 
-def probCAL():
-    
+
+lootDROPS = random.choices(data, rareity = data["chanceWEIGHT"], k = 1)
