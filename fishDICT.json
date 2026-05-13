@@ -3,148 +3,168 @@
     "name": "Atlantic Croaker",
     "minWEIGHT": 1,
     "maxWEIGHT": 2,
-    "rarity": "COMMON"
-
+    "rarity": "COMMON",
+    "chanceWEIGHT": 0.08
 },
 {
     "id": 2,
     "name":"Florida Pompano",
     "minWEIGHT": 1,
     "maxWEIGHT": 3,
-    "rarity": "COMMON"
+    "rarity": "COMMON",
+    "chanceWEIGHT": 0.08
 },
 {
     "id": 3,
     "name": "Black Sea Bass",
     "minWEIGHT": 1,
     "maxWEIGHT": 4,
-    "rarity": "COMMON"
+    "rarity": "COMMON",
+    "chanceWEIGHT": 0.08
 },
 {
     "id": 4,
     "name": "Spotted Seatrout" ,
     "minWEIGHT": 1,
     "maxWEIGHT": 5,
-    "rarity": "COMMON"
+    "rarity": "COMMON",
+    "chanceWEIGHT": 0.08
 },
 {
     "id": 5,
     "name": "Sheepshead",
     "minWEIGHT": 2,
     "maxWEIGHT": 6,
-    "rarity": "COMMON"
+    "rarity": "COMMON",
+    "chanceWEIGHT": 0.08
 },
 {
     "id": 6,
     "name": "Bluefish",
     "minWEIGHT": 3,
     "maxWEIGHT": 7,
-    "rarity": "COMMON"
+    "rarity": "COMMON",
+    "chanceWEIGHT": 0.08
 },
 {
     "id": 7,
     "name": "GraySnapper",
     "minWEIGHT": 3,
     "maxWEIGHT": 8,
-    "rarity": "COMMON"
+    "rarity": "COMMON",
+    "chanceWEIGHT": 0.07
 },
 {
     "id": 8,
     "name": "Atlantic Salmon",
     "minWEIGHT": 5,
     "maxWEIGHT": 12,
-    "rarity": "RARE"
+    "rarity": "RARE",
+    "chanceWEIGHT": 0.07
 },
 {
     "id": 9,
     "name": "Red Grouper",
     "minWEIGHT": 5,
     "maxWEIGHT": 15,
-    "rarity": "RARE"
+    "rarity": "RARE",
+    "chanceWEIGHT": 0.06
 },
 {
     "id": 10,
     "name": "Dolphinfish",
     "minWEIGHT": 5,
     "maxWEIGHT": 25,
-    "rarity": "RARE" 
+    "rarity": "RARE",
+    "chanceWEIGHT": 0.06
 },
 {
     "id": 11,
     "name": "Cobia",
     "minWEIGHT": 10,
     "maxWEIGHT": 40,
-    "rarity":"RARE" 
+    "rarity":"RARE",
+    "chanceWEIGHT": 0.06
 },
 {
     "id": 12,
     "name": "Red Drum Redfish" ,
     "minWEIGHT": 20,
     "maxWEIGHT": 40,
-    "rarity":"EPIC"
+    "rarity":"EPIC",
+    "chanceWEIGHT": 0.05
 },
 {
     "id": 13,
     "name": "Yellowfin Tuna",
     "minWEIGHT": 20,
     "maxWEIGHT": 100,
-    "rarity": "EPIC"
+    "rarity": "EPIC",
+    "chanceWEIGHT": 0.0499
 },
 {
     "id": 14,
     "name": "Amberjack",
     "minWEIGHT": 40,
     "maxWEIGHT": 100,
-    "rarity": "EPIC" 
+    "rarity": "EPIC",
+    "chanceWEIGHT": 0.04
 },
 {
     "id": 15,
     "name": "Atlantic Tarpon" ,
     "minWEIGHT": 40,
     "maxWEIGHT": 150,
-    "rarity": "EPIC"
+    "rarity": "EPIC",
+    "chanceWEIGHT": 0.04
 },
 {
     "id": 16,
     "name": "Swordfish",
     "minWEIGHT": 150,
     "maxWEIGHT": 500,
-    "rarity": "Mythic"
+    "rarity": "MYTHIC",
+    "chanceWEIGHT": 0.005
 },
 {
     "id": 17,
     "name": "Blue Marlon",
     "minWEIGHT": 300,
     "maxWEIGHT": 800,
-    "rarity": "Mythic"
+    "rarity": "MYTHIC",
+    "chanceWEIGHT": 0.005
 },
 {
     "id": 18,
     "name": "Bluefin Tuna",
     "minWEIGHT": 500,
     "maxWEIGHT": 1000,
-    "rarity": "Mythic"
+    "rarity": "MYTHIC",
+    "chanceWEIGHT": 0.005
 },
 {
     "id": 19,
     "name": "Black Marlon" ,
     "minWEIGHT": 800,
     "maxWEIGHT": 1500,
-    "rarity": "Legendary"
+    "rarity": "LEGENDARY",
+    "chanceWEIGHT": 0.0025
 },
 {
     "id": 20,
     "name": "Great White Shark",
     "minWEIGHT": 1500,
     "maxWEIGHT": 3000,
-    "rarity": "Legendary" 
+    "rarity": "LEGENDARY",
+    "chanceWEIGHT": 0.0025
 },
 {
     "id": 21,
     "name": "Megalodon",
     "minWEIGHT": 65000,
     "maxWEIGHT": 145000,
-    "rarity": "Monarch"
+    "rarity": "MONARCH",
+    "chanceWEIGHT": 0.0001
 
 }
 
