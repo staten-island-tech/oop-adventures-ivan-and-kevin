@@ -7,7 +7,9 @@ import math
 class calculator():
     def mult(numbers):
         print(math.prod(numbers))
-rareWEIGHT = []
+numberLIST = [5, 2, 3]
+calculator.mult(numberLIST)
+""" rareWEIGHT = []
 for item in data:
     rarety = item["chanceWEIGHT"]
     rareWEIGHT.append(rarety)
@@ -21,5 +23,10 @@ select = random.choices(nameLIST, weights=rareWEIGHT, k = 1)
 print(select)
 
 def lootSELECT():
-    lootMULTIPLIER = []
-    calculator.mult()
+    rareWEIGHT = []
+    for item in data:
+        rarety = item["chanceWEIGHT"]
+        rareWEIGHT.append(rarety)
+        lootMULTIPLIER = [2,3]
+    calculator.mult(lootMULTIPLIER)
+lootSELECT() """
