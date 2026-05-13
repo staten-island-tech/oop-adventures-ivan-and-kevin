@@ -18,7 +18,8 @@ for item in data:
     nameLIST.append(name)
 
 select = random.choices(nameLIST, weights=rareWEIGHT, k = 1)
-
+print(select)
 
 def lootSELECT():
-    if 
+    lootMULTIPLIER = []
+    calculator.mult()
