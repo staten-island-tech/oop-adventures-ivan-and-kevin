@@ -6,7 +6,8 @@ FishItem.close()
 def item(rod, bait):
     item=input("What item do you want to buy?").lower()
     for item in data:
-        if item("rod"):
-            print("Rod List:")
-        elif item("bait"):
-            print("Bait List:")
+
+ 
+    print("1. Give me a selection of the Rods")
+    print("2. Give me a selection of the Baits")
+    
