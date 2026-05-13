@@ -1,0 +1,39 @@
+[{
+"name": "Fake Fish",
+"description": "A fake fish that is very cheap (can be used for bait).",
+"price": 75,
+"bait": "fake_fish",
+"luck_multiplier": 1.1
+},
+
+{
+"name": "Worm",
+"description": "A live warm that is disgusting.",
+"price": 100,
+"bait": "worm",
+"luck_multiplier": 1.25
+},
+
+{
+"name": "Shrimp",
+"description": "A small shrimp that fishes loves.",
+"price": 10000,
+"bait": "shrimp",
+"luck_multiplier": 2.0
+},
+
+{
+"name": "Squid",
+"description": "An octopus? Or is it a lightbulb?",
+"price": 75000,
+"bait": "squid",
+"luck_multiplier": 3.5
+},
+
+{
+"name": "Golden Lobster",
+"description": "The king of all lobsters, it a delicacy that is only served in the finest restaurants.",
+"price": 1000000,
+"bait": "golden_lobster",
+"luck_multiplier": 10.0
+}]
