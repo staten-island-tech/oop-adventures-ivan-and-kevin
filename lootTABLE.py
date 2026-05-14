@@ -16,15 +16,23 @@ rareWEIGHT = []
 for item in data:
     rarety = item["chanceWEIGHT"]
     rareWEIGHT.append(rarety)
-
 nameLIST = []
 for item in data:
     name = item["name"]
     nameLIST.append(name)
 
-select = random.choices(nameLIST, weights=rareWEIGHT, k = 1)
+
+
+select = random.choices(nameLIST, weights=rareWEIGHT, k = 10)
 print(select)
 
+luckFACTORS = [3, 1.2]
 def lootSELECT(luckMULTIPLIER):
+    for item in data:
+        if rareWEIGHT < 0.01:
+            
 
-lootSELECT()
+
+lootSELECT(calculator.mult(luckFACTORS))
+
+
