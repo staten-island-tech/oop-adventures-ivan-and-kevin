@@ -28,8 +28,8 @@ dictFISH(data)
 for key, value in reorg_fishDICT.items():
     print(key, "→", value)
 
-
-rareWEIGHT = []
+# Selection Example
+""" rareWEIGHT = []
 for item in data:
     rarety = item["chanceWEIGHT"]
     rareWEIGHT.append(rarety)
@@ -41,15 +41,20 @@ for item in data:
 
 
 select = random.choices(nameLIST, weights=rareWEIGHT, k = 10)
-print(select)
-
-luckFACTORS = [3, 1.2]
-def lootSELECT(luckMULTIPLIER):
+print(select) """
+luckFACT = [2, 3]
+def new_lootMULT(luckMULTIPLERS):
+    rareWEIGHT = []
     for item in data:
-        if int(reorg_fishDICT[item["chanceWEIGHT"]]) < 0.01:
-            print(1)
-
-
-lootSELECT(calculator.mult(luckFACTORS))
-
+        rarety = item["chanceWEIGHT"]
+        rareWEIGHT.append(rarety)
+    for x in range(len(rareWEIGHT)):
+        if rareWEIGHT[x] < 0.01:
+            rareFISH = rareWEIGHT[x] < 0.01
+            factors = [luckMULTIPLERS, rareFISH]
+            result = calculator.mult(factors)
+            print(result)
+        else:
+            print("hga")
+new_lootMULT(calculator.mult(luckFACT))
 
