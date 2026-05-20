@@ -9,9 +9,10 @@ import random
 import math
 class calculator():
     def mult(numbers):
-        print(math.prod(numbers))
+        
+        return math.prod(numbers)
 
-reorg_fishDICT = {}
+""" reorg_fishDICT = {}
 def dictFISH(fishes):
     for fish in fishes:
         if fish["name"] not in reorg_fishDICT:
@@ -26,7 +27,7 @@ def dictFISH(fishes):
     return reorg_fishDICT
 dictFISH(data)
 for key, value in reorg_fishDICT.items():
-    print(key, "→", value)
+    print(key, "→", value) """
 
 # Selection Example
 """ rareWEIGHT = []
@@ -42,19 +43,26 @@ for item in data:
 
 select = random.choices(nameLIST, weights=rareWEIGHT, k = 10)
 print(select) """
-luckFACT = [2, 3]
+luckFACT = [1, 50]
 def new_lootMULT(luckMULTIPLERS):
     rareWEIGHT = []
+    nameLIST = []
     for item in data:
         rarety = item["chanceWEIGHT"]
         rareWEIGHT.append(rarety)
-    for x in range(len(rareWEIGHT)):
-        if rareWEIGHT[x] < 0.01:
-            rareFISH = rareWEIGHT[x] < 0.01
-            factors = [luckMULTIPLERS, rareFISH]
-            result = calculator.mult(factors)
-            print(result)
-        else:
-            print("hga")
-new_lootMULT(calculator.mult(luckFACT))
 
+        for x in range(len(rareWEIGHT)):
+            if rareWEIGHT[x] < 0.01:
+                factors = [luckMULTIPLERS, rareWEIGHT[x]]
+                result = calculator.mult(factors)      
+                rareWEIGHT.remove(rareWEIGHT[x])      
+                rareWEIGHT.append(round(result, 5))
+    for item in data:
+        name = item["name"]
+        nameLIST.append(name)
+    
+    select = random.choices(nameLIST, weights=rareWEIGHT, k = 10)
+    return select
+theRESULT = new_lootMULT(calculator.mult(luckFACT))
+print(theRESULT)
+if "Megalodon"
