@@ -34,11 +34,11 @@ class Fisherman:
             print(f"{self.name} does not have enough money to buy the equipment.")
 
     print=input("Enter the name of the fisherman: ")
-    Fisherman = Fisherman(name, money=100, experience=0, inventory=[])
+    Fisherman = Fisherman( name, money=100, experience=0, inventory=[])
 
 
     while True:
-        action = input("What would you like to do? (fish/sell/buy/exit): ")
+        action = input("What would you like to do? (fish/sell/buy/exit/map): ")
         if action == "fish":
             experience_gained = int(input("Enter the experience gained from fishing: "))
             fish_caught = int(input("Enter the number of fish caught: "))
@@ -47,6 +47,8 @@ class Fisherman:
             fish_sold = int(input("Enter the number of fish sold: "))
             money = int(input("Enter the amount of money earned from selling the fish: "))
             Fisherman.sell_fish(fish_sold, money)
+        elif action == "map":
+            print("You can fish in the following locations: Medeiterranian Sea, Atlantic Ocean, Pacific Ocean")
         elif action == "buy":
             print ("You can buy the following equipment: Rods or Bait:")
             cost = int(input("Enter the cost of the equipment: "))
@@ -58,4 +60,5 @@ class Fisherman:
             break
         else:
             print("Invalid action. Please try again.")
+
         
