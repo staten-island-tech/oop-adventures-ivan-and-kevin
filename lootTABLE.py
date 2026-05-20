@@ -27,9 +27,9 @@ class Fisherman:
     def buy_equipment(self, cost, rod, bait):
         if self.money >= cost:
             self.money -= cost
-            print(f"{self.name} has bought a {rod}.")
+            print(f"{self.name}['rod'] has bought a ['name'].")
         elif bait:
-            print(f"{self.name} has bought {bait}.")
+            print(f"{self.name}['bait'] has bought ['name'].")
         else:
             print(f"{self.name} does not have enough money to buy the equipment.")
 
@@ -58,4 +58,4 @@ class Fisherman:
             break
         else:
             print("Invalid action. Please try again.")
-            
+        
