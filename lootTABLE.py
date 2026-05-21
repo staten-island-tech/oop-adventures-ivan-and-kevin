@@ -50,6 +50,7 @@ def new_lootMULT(luckMULTIPLERS):
     nameLIST = []
     fishWEIGHT = []
     fishSELECT = []
+    
     for item in data:
         rarety = item["chanceWEIGHT"]
         rareWEIGHT.append(rarety)
@@ -63,12 +64,11 @@ def new_lootMULT(luckMULTIPLERS):
     for item in data:
         name = item["name"]
         nameLIST.append(name)
-        minWEIGHT = item["minWEIGHT"]
-        maxWEIGHT = item["maxWEIGHT"]
-        fishWEIGHT.append(minWEIGHT)
-        fishWEIGHT.append(maxWEIGHT)
+
     select = random.choices(nameLIST, weights=rareWEIGHT, k = 1)
-    return fishWEIGHT
+    for item in data:
+        if select in data:
+            weightSELECT = 
 theRESULT = new_lootMULT(calculator.mult(luckFACT))
 print(theRESULT)
 
