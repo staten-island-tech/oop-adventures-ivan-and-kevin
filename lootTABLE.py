@@ -43,10 +43,13 @@ for item in data:
 
 select = random.choices(nameLIST, weights=rareWEIGHT, k = 10)
 print(select) """
-luckFACT = [1, 50]
+# Loot selection with Multipliers
+luckFACT = [1, 2]
 def new_lootMULT(luckMULTIPLERS):
     rareWEIGHT = []
     nameLIST = []
+    fishWEIGHT = []
+    fishSELECT = []
     for item in data:
         rarety = item["chanceWEIGHT"]
         rareWEIGHT.append(rarety)
@@ -60,9 +63,16 @@ def new_lootMULT(luckMULTIPLERS):
     for item in data:
         name = item["name"]
         nameLIST.append(name)
+    select = random.choices(nameLIST, weights=rareWEIGHT, k = 1)
+    for item in data:
+        
     
-    select = random.choices(nameLIST, weights=rareWEIGHT, k = 10)
-    return select
 theRESULT = new_lootMULT(calculator.mult(luckFACT))
 print(theRESULT)
-if "Megalodon"
+
+""" expFACTORS = [1]
+class expGAIN_CALCULATIONS():
+    def commonCALC(expFACTORS):
+        commonbaseEXP = round(random.uniform(0.1, 3))
+        factors = [fish weight, commonbaseEXP, ]
+        calculator.mult() """
