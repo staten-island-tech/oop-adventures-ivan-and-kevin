@@ -23,6 +23,8 @@ class Fisherman:
     
     def sell_fish(self, fish_sold, money):
         self.money += money
+        sell.fish= += self.money
+        print(f"{self.name} has sold {fish_sold} fish for {money}   
 
 
 
@@ -62,5 +64,4 @@ class Fisherman:
             break
         else:
             print("Invalid action. Please try again.")
-
-        
+            
