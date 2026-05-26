@@ -1,3 +1,4 @@
+
 import json
 fishDICT = open("./fishDICT.json", encoding="utf8")
 rodDICT = open("./rodDICT.json", encoding="utf8")
@@ -87,3 +88,7 @@ class game_CALC():
     def moneyCALC(weight, factors)
         return ca
     
+
+
+
+
