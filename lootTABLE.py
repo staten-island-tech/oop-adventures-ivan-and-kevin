@@ -79,9 +79,11 @@ print(weightrand, "lbs")
 
 expMULT = [1]
 
-class expgain_CALC():
-    def commonEXP():
-        result = calculator.mult
-
-def 
+class game_CALC():
+    def baseEXP(self, baseEXP, factors):
+        baseEXP = baseEXP
+        factors = factors
+        return calculator.mult(factors, baseEXP)
+    def moneyCALC(weight, factors)
+        return ca
     
