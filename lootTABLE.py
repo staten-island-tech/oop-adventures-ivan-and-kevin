@@ -1,3 +1,4 @@
+
 import json
 fishDICT = open("./fishDICT.json", encoding="utf8")
 rodDICT = open("./rodDICT.json", encoding="utf8")
@@ -85,3 +86,7 @@ class expgain_CALC():
 
 def 
     
+
+
+
+
