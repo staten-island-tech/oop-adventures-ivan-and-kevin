@@ -10,8 +10,9 @@ import random
 import math
 class calculator():
     def mult(numbers):
-        
         return math.prod(numbers)
+    def twomult(x, y):
+        return x*y
 
 """ reorg_fishDICT = {}
 def dictFISH(fishes):
@@ -77,16 +78,32 @@ def fishWEIGHT(fishSELECT):
             return weight
 weightrand = fishWEIGHT(fishSELECTED)
 print(weightrand, "lbs")
+def fishWEIGHT(fishSELECT):
+    for count in range(data[-1]["id"]):
+        if fishSELECT[0] in data[count]["name"]:
+            rarity = data[count]["rarity"]
+            return rarity
+rareRAND = fishWEIGHT(fishSELECTED)
+print(rareRAND)
+factors = []
+def expCALC(fishSELECT):
+    for count in range(data[-1]["id"]):
+        if fishSELECT[0] in data[count]["name"]:
+            if data[count]["id"] > 15:
+                baseEXP = random.randint(1, 3)
+                factors.append(baseEXP)
+                result = calculator.twomult(factors, weightrand)
+            else:
+                baseEXP = random.randint(5, 10)
+                factors.append(baseEXP)
+                result = calculator.twomult(factors, weightrand)
+    return result
+calcEXP = expCALC(fishSELECTED)
+print(calcEXP)
 
-expMULT = [1]
 
-class game_CALC():
-    def baseEXP(self, baseEXP, factors):
-        baseEXP = baseEXP
-        factors = factors
-        return calculator.mult(factors, baseEXP)
-    def moneyCALC(weight, factors)
-        return ca
+
+
     
 
 
