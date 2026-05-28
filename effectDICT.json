@@ -1,0 +1,32 @@
+[
+{
+"effect": "basic",
+"description": "A normal fish with no special effects.",
+"money_multiplier":1.0
+},
+{
+"effect": "Shiny",
+"description": "An effect that make the fish shiny, and appreciates the value of the fish.",
+"money_multiplier":1.5
+},
+{
+"effect": "Scorched",
+"description": "An effect that burns the fish, potentially poisonous.",
+"money_multiplier":0.75 
+},
+{
+"effect": "Radioactive",
+"description": "A fish that has radiation, extremely toxic (DO NOT CONSUME).",
+"money_multiplier":0.1
+},
+{
+"effect": "Prismatic",
+"description": " Scales shift through a dazzling array of rainbow colors. Mesmerizing to look at.",
+"money_multiplier":3.0
+},
+{
+"effect": "rotten",
+"description":" A fish that has been dead for a few months and now is in the process of decomposing. It emits a foul odor and is covered in slime.",
+"money_multiplier":0.25
+}
+]
