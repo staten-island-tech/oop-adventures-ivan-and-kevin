@@ -69,7 +69,7 @@ def new_lootMULT(luckMULTIPLERS):
     return select
 
 fishSELECTED = new_lootMULT(calculator.mult(luckFACT))
-print(fishSELECTED)
+
 
 def fishWEIGHT(fishSELECT):
     for count in range(data[-1]["id"]):
@@ -77,34 +77,34 @@ def fishWEIGHT(fishSELECT):
             weight = random.randint(data[count]["minWEIGHT"], data[count]["maxWEIGHT"])
             return weight
 weightrand = fishWEIGHT(fishSELECTED)
-print(weightrand, "lbs")
+
 def fishWEIGHT(fishSELECT):
     for count in range(data[-1]["id"]):
         if fishSELECT[0] in data[count]["name"]:
             rarity = data[count]["rarity"]
             return rarity
 rareRAND = fishWEIGHT(fishSELECTED)
-print(rareRAND)
+
 factors = []
 def expCALC(fishSELECT):
-    for count in range(data[-1]["id"]):
-        if fishSELECT[0] in data[count]["name"]:
-            if data[count]["id"] > 15:
-                baseEXP = random.randint(1, 3)
-                factors.append(baseEXP)
-                result = calculator.twomult(factors, weightrand)
-            else:
-                baseEXP = random.randint(5, 10)
-                factors.append(baseEXP)
-                result = calculator.twomult(factors, weightrand)
-    return result
+    baseEXP = 1
+    for x in range(data[-1]["id"]):
+        if fishSELECT[0] in data[x]["name"]:
+            if data[x]["id"] <= 15:
+                baseEXP += random.randint(1, 3)
+            elif data[x]["id"] >= 16:
+                baseEXP += random.randint(5, 10)
+    givenEXP = round(calculator.twomult((weightrand/5), baseEXP), 3)
+    multEXP = round(calcula)
 calcEXP = expCALC(fishSELECTED)
-print(calcEXP)
 
 
 
+print(f"You Caught a(n) {fishSELECTED}!")
+print(f"It weighs {weightrand} pounds.")
+print(f"It is {rareRAND}")
+print(f"You gained {calcEXP} exp")
 
-    
 
 
 
