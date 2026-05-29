@@ -28,5 +28,10 @@
 "effect": "rotten",
 "description":" A fish that has been dead for a few months and now is in the process of decomposing. It emits a foul odor and is covered in slime.",
 "money_multiplier":0.25
+},
+{
+"effect": "Transcendent",
+"description":"A fish that has transcended the physical realm, existing in a state of pure energy. It emits a radiant glow and is said to possess immense power.",
+"money_multiplier":5.0
 }
 ]
