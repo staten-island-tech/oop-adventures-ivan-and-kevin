@@ -85,7 +85,7 @@ def fishWEIGHT(fishSELECT):
             return rarity
 rareRAND = fishWEIGHT(fishSELECTED)
 
-factors = []
+factors = [playerinventoryROD, selectedmap]
 def expCALC(fishSELECT):
     baseEXP = 1
     for x in range(data[-1]["id"]):
@@ -95,7 +95,8 @@ def expCALC(fishSELECT):
             elif data[x]["id"] >= 16:
                 baseEXP += random.randint(5, 10)
     givenEXP = round(calculator.twomult((weightrand/5), baseEXP), 3)
-    multEXP = round(calcula)
+    multEXP = round(calculator.twomult(givenEXP, calculator.mult(factors)), 3)
+    return multEXP
 calcEXP = expCALC(fishSELECTED)
 
 
