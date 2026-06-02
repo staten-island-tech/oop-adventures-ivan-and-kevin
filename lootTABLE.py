@@ -42,11 +42,7 @@ class Fisherman:
 
 
     while True:
-        action = input("What would you like to do? (fish/sell/buy/exit/map): ")
-        if action == "fish":
-            experience_gained = int(input("Enter the experience gained from fishing: "))
-            fish_caught = int(input("Enter the number of fish caught: "))
-            Fisherman.fish(experience_gained, fish_caught)
+        action = input("What would you like to do? (sell/buy/exit/map): ")
         elif action == "sell":
             fish_sold = int(input("Enter the number of fish sold: "))
             money = int(input("Enter the amount of money earned from selling the fish: "))
@@ -64,4 +60,3 @@ class Fisherman:
             break
         else:
             print("Invalid action. Please try again.")
-            
