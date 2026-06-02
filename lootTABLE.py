@@ -85,7 +85,7 @@ def fishWEIGHT(fishSELECT):
             return rarity
 rareRAND = fishWEIGHT(fishSELECTED)
 
-factors = [playerinventoryROD, selectedmap]
+factors = [1, 1]
 def expCALC(fishSELECT):
     baseEXP = 1
     for x in range(data[-1]["id"]):
@@ -106,7 +106,22 @@ print(f"It weighs {weightrand} pounds.")
 print(f"It is {rareRAND}")
 print(f"You gained {calcEXP} exp")
 
+class EXPbar():
+    def lvl0to10(nxtLVL, curtLVL):
+        return nxtLVL ** 2 +(1.5*curtLVL + 5)
+    def lvl11to25(nxtLVL, curtLVL):
+        return nxtLVL ** 2 + (3*curtLVL + 7)
+    def lvl26to50(nxtLVL, curtLVL):
+        return nxtLVL ** 2.5 + (curtLVL**1.5 - 2*curtLVL)
+    def lvl51to75(nxtLVL, curtLVL):
+        return nxtLVL ** 2.8 + (curtLVL**1.75 - 2*curtLVL)
+    def lvl76to99(nxtLVL, curtLVL):
+        return nxtLVL ** 3.25 + (curtLVL**2.25 - 2*curtLVL)
+    def lvl99to100(nxtLVL, curtLVL):
+        return nxtLVL ** 3.65 + (curtLVL**2.455 - 2*curtLVL)
 
+
+    
 
 
 
