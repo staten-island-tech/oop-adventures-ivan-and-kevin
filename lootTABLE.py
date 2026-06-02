@@ -42,14 +42,14 @@ class Fisherman:
 
 
     while True:
-        action = input("What would you like to do? (sell/buy/exit/map): ")
+        action = input("What would you like to do? (sell/market/exit/map): ")
         elif action == "sell":
             fish_sold = int(input("Enter the number of fish sold: "))
             money = int(input("Enter the amount of money earned from selling the fish: "))
             Fisherman.sell_fish(fish_sold, money)
         elif action == "map":
             print("You can fish in the following locations: Medeiterranian Sea, Atlantic Ocean, Pacific Ocean")
-        elif action == "buy":
+        elif action == "market":
             print ("You can buy the following equipment: Rods or Bait:")
             cost = int(input("Enter the cost of the equipment: "))
             rod = input("Enter the type of rod you want to buy: ")
