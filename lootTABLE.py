@@ -107,18 +107,21 @@ print(f"It is {rareRAND}")
 print(f"You gained {calcEXP} exp")
 
 class EXPbar():
+    def __init__(self,nxtLVL, curtLVL):
+        self.nxtLVL= nxtLVL
+        self.curtLVL = curtLVL
     def lvl0to10(nxtLVL, curtLVL):
-        return nxtLVL ** 2 +(1.5*curtLVL + 5)
+        return nxtLVL ** 2 +(1.5 * curtLVL + 5)
     def lvl11to25(nxtLVL, curtLVL):
-        return nxtLVL ** 2 + (3*curtLVL + 7)
+        return nxtLVL ** 2 + (3 * curtLVL + 7)
     def lvl26to50(nxtLVL, curtLVL):
-        return nxtLVL ** 2.5 + (curtLVL**1.5 - 2*curtLVL)
+        return nxtLVL ** 2.5 + (curtLVL ** 1.5 - 2 * curtLVL)
     def lvl51to75(nxtLVL, curtLVL):
-        return nxtLVL ** 2.8 + (curtLVL**1.75 - 2*curtLVL)
+        return nxtLVL ** 2.8 + (curtLVL ** 1.75 - 2 * curtLVL)
     def lvl76to99(nxtLVL, curtLVL):
-        return nxtLVL ** 3.25 + (curtLVL**2.25 - 2*curtLVL)
+        return nxtLVL ** 3.25 + (curtLVL ** 2.25 - 2 * curtLVL)
     def lvl99to100(nxtLVL, curtLVL):
-        return nxtLVL ** 3.65 + (curtLVL**2.455 - 2*curtLVL)
+        return nxtLVL ** 3.65 + (curtLVL ** 2.455 - 2 * curtLVL)
 
 
     
