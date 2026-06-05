@@ -99,6 +99,23 @@ def expCALC(fishSELECT):
     return multEXP
 calcEXP = expCALC(fishSELECTED)
 
+def moneyCALC(fishSELECT):
+    baseMONEY = 5
+    worth = []
+    for x in range(data[-1]["id"]):
+        if fishSELECT[0] in data[x]["name"]:
+            if data[x]["rarity"] == "COMMON":
+                worth == baseMONEY*random.randint(1,3)
+            elif data[x]["rarity"] == "RARE":
+                worth == baseMONEY*random.randint(5,10)
+            elif data[x]["rarity"] == "EPIC":
+                worth == baseMONEY*random.randint(11, 14)
+            elif data[x]["rarity"] == "MYTHIC":
+                worth == baseMONEY*random.rantint(15, 18)
+            elif data[x]["rarity"] == "LEGENDARY":
+                worth ==baseMONEY ** 1.75 + baseMONEY*random.randint(2,5)
+    return worth
+calcMONEY = moneyCALC(fishSELECTED)
 
 
 print(f"You Caught a(n) {fishSELECTED}!")
@@ -122,6 +139,7 @@ class EXPbar():
         return nxtLVL ** 3.25 + (curtLVL ** 2.25 - 2 * curtLVL)
     def lvl99to100(nxtLVL, curtLVL):
         return nxtLVL ** 3.65 + (curtLVL ** 2.455 - 2 * curtLVL)
+
 
 
     
