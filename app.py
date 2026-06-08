@@ -23,7 +23,7 @@ class Fisherman:
         else:
             print(f"{self.name} does not have enough money to buy the equipment.")
 
-    print=input("Enter the name of the fisherman: ")
+    name=input("Enter the name of the fisherman: ")
     Fisherman = Fisherman(name, money=100, experience=0, inventory=[])
 
 
