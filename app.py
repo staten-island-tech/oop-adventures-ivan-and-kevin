@@ -12,6 +12,7 @@ class Fisherman:
     
     def sell_fish(self, fish_sold, money):
         self.money += money
+        self.inventory.remove(fish_sold)
 
 
     def buy_equipment(self, cost, rod, bait):
@@ -23,11 +24,9 @@ class Fisherman:
         else:
             print(f"{self.name} does not have enough money to buy the equipment.")
 
-    name=input("Enter the name of the fisherman: ")
-    Fisherman = Fisherman(name, money=100, experience=0, inventory=[])
-
-
-    while True:
+def play(user_name):
+    user_name = Fisherman(user_name, money=100, experience=0, inventory=[])
+    while user_name.experience != 100:
         action = input("What would you like to do? (fish/sell/buy/exit): ")
         if action == "fish":
             experience_gained = int(input("Enter the experience gained from fishing: "))
@@ -48,3 +47,6 @@ class Fisherman:
             break
         else:
             print("Invalid action. Please try again.")
+
+
+play(input("Enter the name of the fisherman: "))
