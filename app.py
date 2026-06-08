@@ -1,3 +1,9 @@
+from lootTABLE import new_lootMULT
+from lootTABLE import fishWEIGHT
+from lootTABLE import fishRARITY
+from lootTABLE import expCALC
+from lootTABLE import moneyCALC
+
 class Fisherman:
     def __init__(self, name, money, experience, inventory):
         self.name = name

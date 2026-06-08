@@ -56,7 +56,7 @@
 },
 {
     "id": 8,
-    "name": "Atlantic Salmon",
+    "name": "Salmon",
     "minWEIGHT": 5,
     "maxWEIGHT": 12,
     "rarity": "RARE",

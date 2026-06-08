@@ -50,7 +50,7 @@ luckFACT = [1, 1]
 def new_lootMULT(luckMULTIPLERS):
     rareWEIGHT = []
     nameLIST = []
-    
+
     for item in data:
         rarety = item["chanceWEIGHT"]
         rareWEIGHT.append(rarety)
@@ -78,12 +78,12 @@ def fishWEIGHT(fishSELECT):
             return weight
 weightrand = fishWEIGHT(fishSELECTED)
 
-def fishWEIGHT(fishSELECT):
+def fishRARITY(fishSELECT):
     for count in range(data[-1]["id"]):
         if fishSELECT[0] in data[count]["name"]:
             rarity = data[count]["rarity"]
             return rarity
-rareRAND = fishWEIGHT(fishSELECTED)
+rareRAND = fishRARITY(fishSELECTED)
 
 EXPfactor = [1, 1]
 def expCALC(fishSELECT):
