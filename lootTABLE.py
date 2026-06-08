@@ -1,0 +1,115 @@
+<<<<<<< HEAD
+=======
+
+import json
+fishDICT = open("./fishDICT.json", encoding="utf8")
+rodDICT = open("./rodDICT.json", encoding="utf8")
+baitDICT = open("./baitDICT.json", encoding="utf8")
+data = json.load(fishDICT)
+rodDATA = json.load(rodDICT)
+baitDATA = json.load(baitDICT)
+import random
+import math
+class calculator():
+    def mult(numbers):
+        return math.prod(numbers)
+    def twomult(x, y):
+        return x*y
+
+""" reorg_fishDICT = {}
+def dictFISH(fishes):
+    for fish in fishes:
+        if fish["name"] not in reorg_fishDICT:
+            reorg_fishDICT[fish["name"]] = {
+                "name":fish["name"]
+            }
+        if fish["rarity"] not in reorg_fishDICT:
+            reorg_fishDICT[fish["name"]] = {
+                "rarity":fish["rarity"],
+                "chanceWEIGHT":fish["chanceWEIGHT"]
+            }
+    return reorg_fishDICT
+dictFISH(data)
+for key, value in reorg_fishDICT.items():
+    print(key, "→", value) """
+
+# Selection Example
+""" rareWEIGHT = []
+for item in data:
+    rarety = item["chanceWEIGHT"]
+    rareWEIGHT.append(rarety)
+
+nameLIST = []
+for item in data:
+    name = item["name"]
+    nameLIST.append(name)
+
+
+select = random.choices(nameLIST, weights=rareWEIGHT, k = 10)
+print(select) """
+# Loot selection with Multipliers
+luckFACT = [1, 1]
+def new_lootMULT(luckMULTIPLERS):
+    rareWEIGHT = []
+    nameLIST = []
+    
+    for item in data:
+        rarety = item["chanceWEIGHT"]
+        rareWEIGHT.append(rarety)
+
+        for x in range(len(rareWEIGHT)):
+            if rareWEIGHT[x] < 0.01:
+                factors = [luckMULTIPLERS, rareWEIGHT[x]]
+                result = calculator.mult(factors)      
+                rareWEIGHT.remove(rareWEIGHT[x])      
+                rareWEIGHT.append(round(result, 5))
+    for item in data:
+        name = item["name"]
+        nameLIST.append(name)
+
+    select = random.choices(nameLIST, weights=rareWEIGHT, k = 1)
+    return select
+
+fishSELECTED = new_lootMULT(calculator.mult(luckFACT))
+
+
+def fishWEIGHT(fishSELECT):
+    for count in range(data[-1]["id"]):
+        if fishSELECT[0] in data[count]["name"]:
+            weight = random.randint(data[count]["minWEIGHT"], data[count]["maxWEIGHT"])
+            return weight
+weightrand = fishWEIGHT(fishSELECTED)
+
+def fishWEIGHT(fishSELECT):
+    for count in range(data[-1]["id"]):
+        if fishSELECT[0] in data[count]["name"]:
+            rarity = data[count]["rarity"]
+            return rarity
+rareRAND = fishWEIGHT(fishSELECTED)
+
+factors = [playerinventoryROD, selectedmap]
+def expCALC(fishSELECT):
+    baseEXP = 1
+    for x in range(data[-1]["id"]):
+        if fishSELECT[0] in data[x]["name"]:
+            if data[x]["id"] <= 15:
+                baseEXP += random.randint(1, 3)
+            elif data[x]["id"] >= 16:
+                baseEXP += random.randint(5, 10)
+    givenEXP = round(calculator.twomult((weightrand/5), baseEXP), 3)
+    multEXP = round(calculator.twomult(givenEXP, calculator.mult(factors)), 3)
+    return multEXP
+calcEXP = expCALC(fishSELECTED)
+
+
+
+print(f"You Caught a(n) {fishSELECTED}!")
+print(f"It weighs {weightrand} pounds.")
+print(f"It is {rareRAND}")
+print(f"You gained {calcEXP} exp")
+
+
+
+
+
+>>>>>>> main
