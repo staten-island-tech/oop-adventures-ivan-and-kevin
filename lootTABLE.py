@@ -26,8 +26,6 @@ class Fisherman:
         sell.fish= += self.money
         print(f"{self.name} has sold {fish_sold} fish for {money}   
 
-
-
     def buy_equipment(self, cost, rod, bait):
         if self.money >= cost:
             self.money -= cost
