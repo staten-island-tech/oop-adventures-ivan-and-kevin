@@ -87,7 +87,7 @@ def fishWEIGHT(fishSELECT):
             return rarity
 rareRAND = fishWEIGHT(fishSELECTED)
 
-factors = [playerinventoryROD, selectedmap]
+EXPfactor = [1, 1]
 def expCALC(fishSELECT):
     baseEXP = 1
     for x in range(data[-1]["id"]):
@@ -97,18 +97,58 @@ def expCALC(fishSELECT):
             elif data[x]["id"] >= 16:
                 baseEXP += random.randint(5, 10)
     givenEXP = round(calculator.twomult((weightrand/5), baseEXP), 3)
-    multEXP = round(calculator.twomult(givenEXP, calculator.mult(factors)), 3)
+    multEXP = round(calculator.twomult(givenEXP, calculator.mult(EXPfactor)), 3)
     return multEXP
 calcEXP = expCALC(fishSELECTED)
-
+MONEYfactor = [1, 1]
+def moneyCALC(fishSELECT):
+    baseMONEY = round(random.uniform(1.5,5), 2)
+    worth = 0
+    for x in range(data[-1]["id"]):
+        if fishSELECT[0] in data[x]["name"]:
+            if data[x]["rarity"] == "COMMON":
+                worth = baseMONEY*random.randint(1, 3)
+            elif data[x]["rarity"] == "RARE":
+                worth = baseMONEY*random.randint(5, 10)
+            elif data[x]["rarity"] == "EPIC":
+                worth = baseMONEY*random.randint(11, 14)
+            elif data[x]["rarity"] == "MYTHIC":
+                worth = baseMONEY*random.randint(15, 18)
+            elif data[x]["rarity"] == "LEGENDARY":
+                worth = baseMONEY ** 1.75 + baseMONEY*random.randint(2,5)
+            finalWORTH = round(calculator.twomult(worth, calculator.mult(MONEYfactor)), 2)
+            return finalWORTH
+            
+calcMONEY = moneyCALC(fishSELECTED)
 
 
 print(f"You Caught a(n) {fishSELECTED}!")
 print(f"It weighs {weightrand} pounds.")
 print(f"It is {rareRAND}")
 print(f"You gained {calcEXP} exp")
+print(f"The fish is worth ${calcMONEY}")
+print()
+class EXPbar():
+    def __init__(self,nxtLVL, curtLVL):
+        self.nxtLVL= nxtLVL
+        self.curtLVL = curtLVL
+    def lvl0to10(nxtLVL, curtLVL):
+        return nxtLVL ** 2 +(1.5 * curtLVL + 5)
+    def lvl11to25(nxtLVL, curtLVL):
+        return nxtLVL ** 2 + (3 * curtLVL + 7)
+    def lvl26to50(nxtLVL, curtLVL):
+        return nxtLVL ** 2.5 + (curtLVL ** 1.5 - 2 * curtLVL)
+    def lvl51to75(nxtLVL, curtLVL):
+        return nxtLVL ** 2.8 + (curtLVL ** 1.75 - 2 * curtLVL)
+    def lvl76to99(nxtLVL, curtLVL):
+        return nxtLVL ** 3.25 + (curtLVL ** 2.25 - 2 * curtLVL)
+    def lvl99to100(nxtLVL, curtLVL):
+        return nxtLVL ** 3.65 + (curtLVL ** 2.455 - 2 * curtLVL)
 
 
+
+
+    
 
 
 
