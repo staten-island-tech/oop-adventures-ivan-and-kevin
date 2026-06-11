@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import json
 Fish_file = open("./fishDICT.json", encoding="utf8")
 Bait_file = open("./baitDICT.json", encoding="utf8")
@@ -5,6 +6,13 @@ rod_file = open("./rodDICT.json", encoding="utf8")
 data = json.load(Fish_file)
 data2 = json.load(Bait_file)
 data3 = json.load(rod_file)
+=======
+from lootTABLE import new_lootMULT
+from lootTABLE import fishWEIGHT
+from lootTABLE import fishRARITY
+from lootTABLE import expCALC
+from lootTABLE import moneyCALC
+>>>>>>> main
 
 class Fisherman:
     def __init__(self, name, money, experience, inventory):
@@ -20,7 +28,12 @@ class Fisherman:
     
     def sell_fish(self, fish_sold, money):
         self.money += money
+<<<<<<< HEAD
         print(f"{self.name} has sold {fish_sold} fish for {money}")
+=======
+        self.inventory.remove(fish_sold)
+
+>>>>>>> main
 
     def buy_equipment(self, cost, rod, bait):
         if self.money >= cost:
@@ -31,6 +44,7 @@ class Fisherman:
         else:
             print(f"{self.name} does not have enough money to buy the equipment.")
 
+<<<<<<< HEAD
     name=input("Enter the name of the fisherman: ")
     Fisherman = Fisherman(name, money=100, experience=0, inventory=[])
 
@@ -38,6 +52,17 @@ class Fisherman:
     while True:
         action = input("What would you like to do? (sell/market/exit/map): ")
         if action == "sell":
+=======
+def play(user_name):
+    user_name = Fisherman(user_name, money=100, experience=0, inventory=[])
+    while user_name.experience != 100:
+        action = input("What would you like to do? (fish/sell/buy/exit): ")
+        if action == "fish":
+            experience_gained = int(input("Enter the experience gained from fishing: "))
+            fish_caught = int(input("Enter the number of fish caught: "))
+            Fisherman.fish(experience_gained, fish_caught)
+        elif action == "sell":
+>>>>>>> main
             fish_sold = int(input("Enter the number of fish sold: "))
             money = int(input("Enter the amount of money earned from selling the fish: "))
             Fisherman.sell_fish(fish_sold, money)
@@ -53,4 +78,11 @@ class Fisherman:
             print(f"{Fisherman.name} has {Fisherman.money} money and {Fisherman.experience} experience points.")
             break
         else:
+<<<<<<< HEAD
             print("Invalid action. Please try again.")
+=======
+            print("Invalid action. Please try again.")
+
+
+play(input("Enter the name of the fisherman: "))
+>>>>>>> main
