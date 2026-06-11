@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 """ from lootTABLE import new_lootMULT
 from lootTABLE import fishWEIGHT
 from lootTABLE import fishRARITY
 from lootTABLE import expCALC
 from lootTABLE import moneyCALC """
+=======
+import json
+Fish_file = open("./fishDICT.json", encoding="utf8")
+Bait_file = open("./baitDICT.json", encoding="utf8")
+rod_file = open("./rodDICT.json", encoding="utf8")
+data = json.load(Fish_file)
+data2 = json.load(Bait_file)
+data3 = json.load(rod_file)
+>>>>>>> FishClass
 
 class Fisherman:
     def __init__(self, name, money, experience, inventory):
@@ -18,18 +28,23 @@ class Fisherman:
     
     def sell_fish(self, fish_sold, money):
         self.money += money
+<<<<<<< HEAD
         self.inventory.remove(fish_sold)
 
+=======
+        print(f"{self.name} has sold {fish_sold} fish for {money}")
+>>>>>>> FishClass
 
     def buy_equipment(self, cost, rod, bait):
         if self.money >= cost:
             self.money -= cost
-            print(f"{self.name} has bought a {rod}.")
+            print(f"{self.name}['rod'] has bought a ['name'].")
         elif bait:
-            print(f"{self.name} has bought {bait}.")
+            print(f"{self.name}['bait'] has bought ['name'].")
         else:
             print(f"{self.name} does not have enough money to buy the equipment.")
 
+<<<<<<< HEAD
 def play(user_name):
     user_name = Fisherman(user_name, money=100, experience=0, inventory=[])
     while user_name.experience != 100:
@@ -42,10 +57,21 @@ def play(user_name):
         if int(action) == 1:
 
         elif action == "sell":
+=======
+    name=input("Enter the name of the fisherman: ")
+    Fisherman = Fisherman(name, money=100, experience=0, inventory=[])
+
+
+    while True:
+        action = input("What would you like to do? (sell/market/exit/map): ")
+        if action == "sell":
+>>>>>>> FishClass
             fish_sold = int(input("Enter the number of fish sold: "))
             money = int(input("Enter the amount of money earned from selling the fish: "))
             Fisherman.sell_fish(fish_sold, money)
-        elif action == "buy":
+        elif action == "map":
+            print("You can fish in the following locations: Medeiterranian Sea, Atlantic Ocean, Pacific Ocean")
+        elif action == "market":
             print ("You can buy the following equipment: Rods or Bait:")
             cost = int(input("Enter the cost of the equipment: "))
             rod = input("Enter the type of rod you want to buy: ")
@@ -55,7 +81,11 @@ def play(user_name):
             print(f"{Fisherman.name} has {Fisherman.money} money and {Fisherman.experience} experience points.")
             break
         else:
+<<<<<<< HEAD
             print("Invalid action. Please try again.")
 
 
 play(input("Enter the name of the fisherman: "))
+=======
+            print("Invalid action. Please try again.")
+>>>>>>> FishClass

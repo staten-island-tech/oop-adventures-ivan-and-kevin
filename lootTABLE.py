@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 import json
 fishDICT = open("./fishDICT.json", encoding="utf8")
@@ -150,3 +152,4 @@ class EXPbar():
 
 
 
+>>>>>>> main
