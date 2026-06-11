@@ -1,9 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> FishClass
 """ from lootTABLE import new_lootMULT
 from lootTABLE import fishWEIGHT
 from lootTABLE import fishRARITY
 from lootTABLE import expCALC
 from lootTABLE import moneyCALC """
+<<<<<<< HEAD
 =======
 import json
 Fish_file = open("./fishDICT.json", encoding="utf8")
@@ -12,6 +17,9 @@ rod_file = open("./rodDICT.json", encoding="utf8")
 data = json.load(Fish_file)
 data2 = json.load(Bait_file)
 data3 = json.load(rod_file)
+>>>>>>> FishClass
+=======
+
 >>>>>>> FishClass
 
 class Fisherman:
@@ -29,10 +37,14 @@ class Fisherman:
     def sell_fish(self, fish_sold, money):
         self.money += money
 <<<<<<< HEAD
+<<<<<<< HEAD
         self.inventory.remove(fish_sold)
 
 =======
         print(f"{self.name} has sold {fish_sold} fish for {money}")
+>>>>>>> FishClass
+=======
+
 >>>>>>> FishClass
 
     def buy_equipment(self, cost, rod, bait):
@@ -45,6 +57,9 @@ class Fisherman:
             print(f"{self.name} does not have enough money to buy the equipment.")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> FishClass
 def play(user_name):
     user_name = Fisherman(user_name, money=100, experience=0, inventory=[])
     while user_name.experience != 100:
@@ -57,6 +72,7 @@ def play(user_name):
         if int(action) == 1:
 
         elif action == "sell":
+<<<<<<< HEAD
 =======
     name=input("Enter the name of the fisherman: ")
     Fisherman = Fisherman(name, money=100, experience=0, inventory=[])
@@ -65,6 +81,9 @@ def play(user_name):
     while True:
         action = input("What would you like to do? (sell/market/exit/map): ")
         if action == "sell":
+>>>>>>> FishClass
+=======
+
 >>>>>>> FishClass
             fish_sold = int(input("Enter the number of fish sold: "))
             money = int(input("Enter the amount of money earned from selling the fish: "))
@@ -82,10 +101,13 @@ def play(user_name):
             break
         else:
 <<<<<<< HEAD
+<<<<<<< HEAD
             print("Invalid action. Please try again.")
 
 
 play(input("Enter the name of the fisherman: "))
 =======
             print("Invalid action. Please try again.")
+>>>>>>> FishClass
+=======
 >>>>>>> FishClass
