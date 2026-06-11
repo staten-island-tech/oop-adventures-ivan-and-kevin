@@ -85,8 +85,8 @@ def fishWEIGHT(fishSELECT):
             return rarity
 rareRAND = fishWEIGHT(fishSELECTED)
 
-EXPfactor = [1, 1]
-def expCALC(fishSELECT):
+
+def expCALC(fishSELECT, EXPfactor):
     baseEXP = 1
     for x in range(data[-1]["id"]):
         if fishSELECT[0] in data[x]["name"]:
@@ -97,9 +97,9 @@ def expCALC(fishSELECT):
     givenEXP = round(calculator.twomult((weightrand/5), baseEXP), 3)
     multEXP = round(calculator.twomult(givenEXP, calculator.mult(EXPfactor)), 3)
     return multEXP
-calcEXP = expCALC(fishSELECTED)
+calcEXP = expCALC(fishSELECTED, calculator.twomult(selectedMAP, selectedROD))
 MONEYfactor = [1, 1]
-def moneyCALC(fishSELECT):
+def moneyCALC(fishSELECT, MONEYfact):
     baseMONEY = round(random.uniform(1.5,5), 2)
     worth = 0
     for x in range(data[-1]["id"]):
@@ -117,7 +117,7 @@ def moneyCALC(fishSELECT):
             finalWORTH = round(calculator.twomult(worth, calculator.mult(MONEYfactor)), 2)
             return finalWORTH
             
-calcMONEY = moneyCALC(fishSELECTED)
+calcMONEY = moneyCALC(fishSELECTED, calculator.twomult(selectedMAP, selectedROD))
 
 
 print(f"You Caught a(n) {fishSELECTED}!")
