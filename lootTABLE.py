@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import json
 fishDICT = open("./fishDICT.json", encoding="utf8")
@@ -48,7 +46,7 @@ for item in data:
 select = random.choices(nameLIST, weights=rareWEIGHT, k = 10)
 print(select) """
 # Loot selection with Multipliers
-luckFACT = [1, 1]
+""" luckFACT = [1, 1]
 def new_lootMULT(luckMULTIPLERS):
     rareWEIGHT = []
     nameLIST = []
@@ -143,13 +141,29 @@ class EXPbar():
     def lvl76to99(nxtLVL, curtLVL):
         return nxtLVL ** 3.25 + (curtLVL ** 2.25 - 2 * curtLVL)
     def lvl99to100(nxtLVL, curtLVL):
-        return nxtLVL ** 3.65 + (curtLVL ** 2.455 - 2 * curtLVL)
+        return nxtLVL ** 3.65 + (curtLVL ** 2.455 - 2 * curtLVL) """
 
 
 
 
     
 
-
-
->>>>>>> main
+rodSHOP = {}
+def dictROD(rods):
+    for rod in rods:
+        if rod["name"] not in dictROD:
+            dictROD[rod["name"]] = {
+                "name":rod["name"]
+            }
+        if rod[""] not in dictROD:
+            dictROD[rod["name"]] = {
+                "Description":rod["description"],
+                "Price":rod["price"],
+                "Rarity":rod["rarity"],
+                "ExperienceMultiplier":rod["experience_multiplier"],
+                "LuckMultiplier":rod["luck_multiplier"]
+            }
+    return dictROD
+dictROD(rodDATA)
+for key, value in rodDATA.items():
+    print(key, "→", value)
