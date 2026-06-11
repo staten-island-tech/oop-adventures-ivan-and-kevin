@@ -1,8 +1,8 @@
-from lootTABLE import new_lootMULT
+""" from lootTABLE import new_lootMULT
 from lootTABLE import fishWEIGHT
 from lootTABLE import fishRARITY
 from lootTABLE import expCALC
-from lootTABLE import moneyCALC
+from lootTABLE import moneyCALC """
 
 class Fisherman:
     def __init__(self, name, money, experience, inventory):
@@ -33,11 +33,14 @@ class Fisherman:
 def play(user_name):
     user_name = Fisherman(user_name, money=100, experience=0, inventory=[])
     while user_name.experience != 100:
-        action = input("What would you like to do? (fish/sell/buy/exit): ")
-        if action == "fish":
-            experience_gained = int(input("Enter the experience gained from fishing: "))
-            fish_caught = int(input("Enter the number of fish caught: "))
-            Fisherman.fish(experience_gained, fish_caught)
+        action = input("What would you like to do? "  
+        "  1: Fish"
+        "  2: Sell"
+        "  3: Go to Shop"
+        "  4: Map Select"
+        "  5: Inspect Inventory")
+        if int(action) == 1:
+
         elif action == "sell":
             fish_sold = int(input("Enter the number of fish sold: "))
             money = int(input("Enter the amount of money earned from selling the fish: "))
