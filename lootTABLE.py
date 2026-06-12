@@ -70,7 +70,6 @@ def new_lootMULT(luckMULTIPLERS):
     select = random.choices(nameLIST, weights=rareWEIGHT, k = 1)
     return select
 
-fishSELECTED = new_lootMULT(calculator.mult(luckFACT))
 
 
 def fishWEIGHT(fishSELECT):
@@ -78,14 +77,14 @@ def fishWEIGHT(fishSELECT):
         if fishSELECT[0] in data[count]["name"]:
             weight = random.randint(data[count]["minWEIGHT"], data[count]["maxWEIGHT"])
             return weight
-weightrand = fishWEIGHT(fishSELECTED)
+
 
 def fishRARITY(fishSELECT):
     for count in range(data[-1]["id"]):
         if fishSELECT[0] in data[count]["name"]:
             rarity = data[count]["rarity"]
             return rarity
-rareRAND = fishRARITY(fishSELECTED)
+
 
 EXPfactor = [1, 1]
 def expCALC(fishSELECT):
@@ -99,7 +98,7 @@ def expCALC(fishSELECT):
     givenEXP = round(calculator.twomult((weightrand/5), baseEXP), 3)
     multEXP = round(calculator.twomult(givenEXP, calculator.mult(EXPfactor)), 3)
     return multEXP
-calcEXP = expCALC(fishSELECTED)
+
 MONEYfactor = [1, 1]
 def moneyCALC(fishSELECT):
     baseMONEY = round(random.uniform(1.5,5), 2)
@@ -118,16 +117,15 @@ def moneyCALC(fishSELECT):
                 worth = baseMONEY ** 1.75 + baseMONEY*random.randint(2,5)
             finalWORTH = round(calculator.twomult(worth, calculator.mult(MONEYfactor)), 2)
             return finalWORTH
-            
-calcMONEY = moneyCALC(fishSELECTED)
 
 
-print(f"You Caught a(n) {fishSELECTED}!")
+
+""" print(f"You Caught a(n) {fishSELECTED}!")
 print(f"It weighs {weightrand} pounds.")
 print(f"It is {rareRAND}")
 print(f"You gained {calcEXP} exp")
 print(f"The fish is worth ${calcMONEY}")
-print()
+print() """
 class EXPbar():
     def __init__(self,nxtLVL, curtLVL):
         self.nxtLVL= nxtLVL
@@ -162,7 +160,7 @@ def dictROD(rods):
                 "LuckMultiplier": rod["luck_multiplier"] 
             }
     return rodSHOP
-rodSHOP = dictROD(rodDATA) 
+
 def displayRODSHOP(rodSHOP):
     for key, value in rodSHOP.items():
         print(f"Name: {key}")
@@ -172,13 +170,38 @@ def displayRODSHOP(rodSHOP):
         print(f"ExperienceMultiplier: {value['ExperienceMultiplier']}x")
         print(f"LuckMultiplir: {value['LuckMultiplier']}x")
         print()
-displayRODSHOP(rodSHOP)
+
 
 def displayMAPS(mapDATA):
-    # 1. Loop through the list to grab each map dictionary
-    for map_dict in mapDATA:
-        # 2. Use .items() on the dictionary, NOT the list
-        for key, value in map_dict.items():
-            print(f"{key}: {value}")
-        print( )
-displayMAPS(mapDATA)
+    for index, map_dict in enumerate(mapDATA):
+        print(f"Map #{index + 1}: {map_dict['Name']}")
+        print(f"Description: {map_dict['Description']}")
+        print(f"LVLRequirement: {map_dict['LevelRequirement']}")
+        print(f"EXPMultiplier: {map_dict['ExperienceMultiplier']}")
+        print()
+
+
+
+def dictBAIT(baits):
+    baitSHOP = {}
+    for bait in baits:
+        if bait["name"] not in baitSHOP:
+            baitSHOP[bait["name"]] = {
+                "Description": bait["description"],
+                "Price": bait["price"],
+                "Bait": bait["bait"],
+                "LuckMultiplier": bait["luck_multiplier"]
+            }
+    return baitSHOP
+
+
+def displayBAITSHOP(baitSHOP):
+    for key, value in baitSHOP.items():
+        print(f"Name: {key}")
+        print(f"Description: {value['Description']}")
+        print(f"Price: {value['Price']} coins")
+        print(f"BaitType: {value['Bait']}")
+        print(f"LuckMultiplier: {value['LuckMultiplier']}x")
+        print()
+
+
