@@ -72,7 +72,7 @@ class Fisherman:
 
 def play(user_name):
     user_name = Fisherman(user_name, money=100, experience=0, inventory={}, level=1)
-    mapSELECTED = ['Mediterranean Sea']
+    mapSELECTED = ['Mangrove Lagoon']
     
     while user_name.level != 100:
         print("Main Menu")
@@ -94,19 +94,22 @@ def play(user_name):
             if mapSELECTED != 0:
                 fishACT = input("1. Cast Your Rod 2. Select your bait 3. Select Your rod4. Leave")
                 if int(fishACT) == 1:
-                    for bait in baitDATA:
-                        if baitSELECTED in baitDATA:
-                            luckFACTS.append(baitDATA[bait]["luck_multiplier"])
-                    for rod in rodDATA:
-                        if rodSELECTED in rodDATA:
-                            luckFACTS.append(rodDATA[rod]["luck_multiplier"])
-                    fishSELECTED = new_lootMULT(calculator.mult(luckFACTS))
-                    weightrand = fishWEIGHT(fishSELECTED)
-                    rarerand = fishRARITY(fishSELECTED)
-                    calcEXP = expCALC(fishSELECTED)
-                    calcMONEY = moneyCALC(fishSELECTED)
-                    user_name.fish(calcEXP, fishSELECTED[0])
-                    print( )
+                    if rodSELECTED not in rodDATA:
+                        print("Select A Rod")
+                    else:
+                        for bait in baitDATA:
+                            if baitSELECTED in baitDATA:
+                                luckFACTS.append(baitDATA[bait]["luck_multiplier"])
+                        for rod in rodDATA:
+                            if rodSELECTED in rodDATA:
+                                luckFACTS.append(rodDATA[rod]["luck_multiplier"])
+                        fishSELECTED = new_lootMULT(calculator.mult(luckFACTS))
+                        weightrand = fishWEIGHT(fishSELECTED)
+                        rarerand = fishRARITY(fishSELECTED)
+                        calcEXP = expCALC(fishSELECTED)
+                        calcMONEY = moneyCALC(fishSELECTED)
+                        user_name.fish(calcEXP, fishSELECTED[0])
+                        print()
                 elif int(fishACT) == 2:
                     user_name.openIN()
                     baitSELECT = input("What bait would you like to use?")
@@ -154,6 +157,9 @@ def play(user_name):
     
                                 if user_name.buy_equipment(item_cost, buyACT):
                                     user_name.inventory.append(buyACT)
+                                    for rod in rodDATA:
+                                        if buyACT not in rodDATA:
+                                            user_name.inventory[rod["name"]]
         
                             elif buyACT in baitSHOP:
                                 item_data = baitSHOP[buyACT]  
