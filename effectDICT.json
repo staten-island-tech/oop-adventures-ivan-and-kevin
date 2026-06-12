@@ -1,37 +1,79 @@
 [
-{
-"effect": "basic",
-"description": "A normal fish with no special effects.",
-"money_multiplier":1.0
-},
-{
-"effect": "Shiny",
-"description": "An effect that make the fish shiny, and appreciates the value of the fish.",
-"money_multiplier":1.5
-},
-{
-"effect": "Scorched",
-"description": "An effect that burns the fish, potentially poisonous.",
-"money_multiplier":0.75 
-},
-{
-"effect": "Radioactive",
-"description": "A fish that has radiation, extremely toxic (DO NOT CONSUME).",
-"money_multiplier":0.1
-},
-{
-"effect": "Prismatic",
-"description": " Scales shift through a dazzling array of rainbow colors. Mesmerizing to look at.",
-"money_multiplier":3.0
-},
-{
-"effect": "rotten",
-"description":" A fish that has been dead for a few months and now is in the process of decomposing. It emits a foul odor and is covered in slime.",
-"money_multiplier":0.25
-},
-{
-"effect": "Transcendent",
-"description":"A fish that has transcended the physical realm, existing in a state of pure energy. It emits a radiant glow and is said to possess immense power.",
-"money_multiplier":5.0
-}
+    {
+        "effect": "basic",
+        "description": "A normal fish with no special effects.",
+        "money_multiplier": 1.0,
+        "rarity": "common",
+        "chance": 0.50
+    },
+    {
+        "effect": "Scorched",
+        "description": "An effect that burns the fish, potentially poisonous.",
+        "money_multiplier": 0.75,
+        "rarity": "common",
+        "chance": 0.15
+    },
+    {
+        "effect": "Parasitic",
+        "description": "Infested with visible wriggling sea lice and tapeworms. Most of the edible meat has been ruined.",
+        "money_multiplier": 0.4,
+        "rarity": "rare",
+        "chance": 0.10
+    },
+    {
+        "effect": "Shiny",
+        "description": "An effect that make the fish shiny, and appreciates the value of the fish.",
+        "money_multiplier": 1.5,
+        "rarity": "rare",
+        "chance": 0.10
+    },
+    {
+        "effect": "rotten",
+        "description": "A fish that has been dead for a few months and now is in the process of decomposing. It emits a foul odor and is covered in slime.",
+        "money_multiplier": 0.25,
+        "rarity": "epic",
+        "chance": 0.05
+    },
+    {
+        "effect": "Bioluminescent",
+        "description": "The fish glows with its own living light, revealing intricate glowing patterns that aquarium collectors pay handsomely for.",
+        "money_multiplier": 2.0,
+        "rarity": "epic",
+        "chance": 0.04
+    },
+    {
+        "effect": "Plagued",
+        "description": "Covered in weeping black pustules and fungal growths. Selling it is highly discouraged due to health hazards.",
+        "money_multiplier": 0.15,
+        "rarity": "mythic",
+        "chance": 0.025
+    },
+    {
+        "effect": "Prismatic",
+        "description": "Scal shift through a dazzling array of rainbow colors. Mesmerizing to look at.",
+        "money_multiplier": 3.0,
+        "rarity": "mythic",
+        "chance": 0.02
+    },
+    {
+        "effect": "Radioactive",
+        "description": "A fish that has radiation, extremely toxic (DO NOT CONSUME).",
+        "money_multiplier": 0.1,
+        "rarity": "legendary",
+        "chance": 0.009
+    },
+    {
+        "effect": "Abyssal Gold",
+        "description": "A rare mutation that encrusts the fish scales with flakes of pure, deep-sea gold ore.",
+        "money_multiplier": 4.0,
+        "rarity": "legendary",
+        "chance": 0.005
+    },
+    {
+        "effect": "Transcendent",
+        "description": "A fish that has transcended the physical realm, existing in a state of pure energy. It emits a radiant glow and is said to possess immense power.",
+        "money_multiplier": 5.0,
+        "rarity": "monarch",
+        "chance": 0.001
+    }
 ]

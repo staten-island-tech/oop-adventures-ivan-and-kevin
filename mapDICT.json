@@ -1,27 +1,26 @@
-[{
-    "name": "Mediterranean Sea",
-    "description": "This location is the very first location that you will start your journey as a fisherman",
-    "Level_requirement": 1,
-    "Experience_multiplier": 1.0
-},
-
-{
-    "name": "Atlantic Ocean",
-    "description": "This location is one of the largest oceans in the world, second only to the Pacific Ocean. It is home to a wide variety of fish species.",
-    "Level_requirement": 25,
-    "Experience_multiplier": 1.25
-},
-{
-    "name": "Arctic Ocean", 
-    "description": "This frigid, ice-covered location is home to some of the hardiest and most unique fish species in the world.", 
+[
+  { 
+    "name": "Mangrove Lagoon", 
+    "description": "Your fishing journey begins in these calm, root-tangled waters. It is the perfect nursery ground for a novice angler to learn the ropes.", 
+    "Level_requirement": 1, 
+    "Experience_multiplier": 1.0 
+  }, 
+  { 
+    "name": "The Grand Horizon", 
+    "description": "The shoreline fades completely out of sight in this massive, open-water expanse. A diverse paradise of mid-tier game fish awaits those brave enough to sail here.", 
+    "Level_requirement": 25, 
+    "Experience_multiplier": 1.25 
+  }, 
+  { 
+    "name": "Absolute Zero", 
+    "description": "A brutal, ice-locked wasteland where the water itself defies freezing. Only the hardiest anglers can survive to pull legendary, frost-adapted species from beneath the ice shelves.", 
     "Level_requirement": 50, 
-    "Experience_multiplier": 2
-},
-
-{
-    "name": "Pacific Ocean",
-    "description": "This location is the largest ocean in the world, it is home to a wide variety of fish species, including some of the most sought-after game fish.",
-    "Level_requirement": 75,
-    "Experience_multiplier": 3.25
-}
+    "Experience_multiplier": 2.0 
+  }, 
+  { 
+    "name": "The Deep Abyss", 
+    "description": "Pitch-black waters plunging into the planet's lowest depths. This crushing, alien environment holds the ultimate prize: colossal, bioluminescent game fish sought by masters.", 
+    "Level_requirement": 75, 
+    "Experience_multiplier": 3.25 
+  } 
 ]

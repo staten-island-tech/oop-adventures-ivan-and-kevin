@@ -1,119 +1,100 @@
-[{
-"name": "Fake Fish",
-"description": "A fake fish that is very cheap (can be used for bait).",
-"price": 75,
-"bait": "fake_fish",
-"luck_multiplier": 1.1
-},
-
-{
-"name": "Worm",
-"description": "A live warm that is disgusting.",
-"price": 100,
-"bait": "worm",
-"luck_multiplier": 1.25
-},
-
-{
-"name": "Shrimp",
-"description": "A small shrimp that fishes loves.",
-"price": 10000,
-"bait": "shrimp",
-"luck_multiplier": 2.0
-},
-
-{
-"name": "Squid",
-"description": "An octopus? Or is it a lightbulb?",
-"price": 75000,
-"bait": "squid",
-"luck_multiplier": 3.5
-},
-
-{
-"name": "Golden Lobster",
-"description": "The king of all lobsters, it a delicacy that is only served in the finest restaurants.",
-"price": 1000000,
-"bait": "golden_lobster",
-"luck_multiplier": 10.0
-}
-]
-/*  {
+[
+    {
+        "name": "Fake Fish",
+        "description": "A fake fish that is very cheap (can be used for bait).",
+        "price": 75,
+        "bait": "fake_fish",
+        "luck_multiplier": 1.0
+    },
+    {
+        "name": "Worm",
+        "description": "A live warm that is disgusting.",
+        "price": 120,
+        "bait": "worm",
+        "luck_multiplier": 1.1
+    },
+    {
         "name": "Minnow",
         "description": "A tiny fish often used by beginners for freshwater fishing.",
-        "price": 250,
+        "price": 220,
         "bait": "minnow",
-        "luck_multiplier": 1.4
+        "luck_multiplier": 1.2
     },
-
     {
         "name": "Cricket",
         "description": "A noisy little insect that attracts river fish easily.",
-        "price": 500,
+        "price": 450,
         "bait": "cricket",
-        "luck_multiplier": 1.55
+        "luck_multiplier": 1.35
     },
-
     {
         "name": "Nightcrawler",
         "description": "A thick worm that works especially well at night.",
-        "price": 1200,
+        "price": 900,
         "bait": "nightcrawler",
-        "luck_multiplier": 1.75
+        "luck_multiplier": 1.5
     },
-
     {
         "name": "Glow Jelly",
         "description": "A glowing jellyfish chunk that shines underwater.",
-        "price": 8500,
+        "price": 1800,
         "bait": "glow_jelly",
-        "luck_multiplier": 2.3
+        "luck_multiplier": 1.8
     },
-
+    {
+        "name": "Shrimp",
+        "description": "A small shrimp that fishes loves.",
+        "price": 3500,
+        "bait": "shrimp",
+        "luck_multiplier": 2.2
+    },
     {
         "name": "Frozen Sardine",
         "description": "A preserved sardine with a strong smell predators love.",
-        "price": 15000,
+        "price": 7000,
         "bait": "frozen_sardine",
-        "luck_multiplier": 2.6
+        "luck_multiplier": 2.8
     },
-
     {
         "name": "Firefly Jar",
         "description": "A magical jar filled with glowing fireflies.",
-        "price": 35000,
+        "price": 15000,
         "bait": "firefly_jar",
-        "luck_multiplier": 3.1
+        "luck_multiplier": 3.5
     },
-
+    {
+        "name": "Squid",
+        "description": "An octopus? Or is it a lightbulb?",
+        "price": 30000,
+        "bait": "squid",
+        "luck_multiplier": 4.5
+    },
     {
         "name": "Electric Eel Chunk",
         "description": "Still slightly shocking to the touch.",
-        "price": 95000,
+        "price": 60000,
         "bait": "electric_eel_chunk",
-        "luck_multiplier": 4.2
+        "luck_multiplier": 5.5
     },
-
     {
         "name": "Dragonfly",
         "description": "Fast-moving bait that rare fish seem unable to resist.",
-        "price": 175000,
+        "price": 125000,
         "bait": "dragonfly",
-        "luck_multiplier": 5.0
+        "luck_multiplier": 7.0
     },
-
     {
         "name": "Phoenix Feather",
         "description": "Warm to the touch and rumored to attract mythical sea creatures.",
-        "price": 450000,
+        "price": 275000,
         "bait": "phoenix_feather",
-        "luck_multiplier": 7.5
+        "luck_multiplier": 8.5
     },
-
     {
-        "name": "Kraken Tentacle",
-        "description": "A massive tentacle fragment from a legendary sea beast.",
-        "price": 2500000,
-        "bait": "kraken_tentacle",
-        "luck_multiplier": 15.0
-    } */ 
+        "name": "Golden Lobster",
+        "description": "The king of all lobsters, it a delicacy that is only served in the finest restaurants.",
+        "price": 600000,
+        "bait": "golden_lobster",
+        "luck_multiplier": 10.0
+    }
+]

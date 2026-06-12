@@ -1,29 +1,38 @@
-[{ 
-"name": "Common Rod", 
-"description": "A common fishing rod used by beginners.", 
-"price": 100 , 
-"rod": "fishing_rod",
-"rarity": "common" , 
-"luck_multiplier": 1.1 , 
-"experience_multiplier":1.0
-},
-
-{
-"name": "Epic Rod",
-"description": " An epic rod that used by experienced pros, has a higher chance to catch rare fish.",
-"price": 25000,
-"rod": "epic_fishing_rod",
-"rarity": "epic",
-"luck_multiplier": 2.5,
-"experience_multiplier":2.25
-},
-
-{
-"name": "Legendary Rod",
-"description": "A legendary rod that used by the best of the best, has a much higher chance to catch rare fish.",
-"price": 500000,
-"rod": "legendary_fishing_rod",
-"rarity": "legendary",
-"luck_multiplier": 5.0,
-"experience_multiplier":4.0
-}]
+[
+    { 
+        "name": "Splintered Bamboo", 
+        "description": "A flimsy, basic rod made from weathered bamboo. It barely holds together.", 
+        "price": 100, 
+        "rod": "fishing_rod",
+        "rarity": "common", 
+        "luck_multiplier": 1.1, 
+        "experience_multiplier": 1.0
+    },
+    {
+        "name": "Abyssal Spine",
+        "description": "Crafted from the calcified remains of an ancient, deep-sea leviathan.",
+        "price": 25000,
+        "rod": "epic_fishing_rod",
+        "rarity": "epic",
+        "luck_multiplier": 2.2,
+        "experience_multiplier": 2.5
+    },
+    {
+        "name": "Maelstrom Carver",
+        "description": "A legendary rod forged from shipwreck timbers that survived the most violent ocean storms.",
+        "price": 500000,
+        "rod": "legendary_fishing_rod",
+        "rarity": "legendary",
+        "luck_multiplier": 4.25,
+        "experience_multiplier": 4.7
+    },
+    {
+        "name": "Sovereign of the Sea",
+        "description": "The ultimate instrument of dominion over the ocean. Whispers of the tides guide its line.",
+        "price": 1750000,
+        "rod": "sovereign_fishing_rod",
+        "rarity": "Monarch",
+        "luck_multiplier": 6.55,
+        "experience_multiplier": 7
+    }
+]
