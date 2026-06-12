@@ -1,28 +1,28 @@
-[{
-    "Name": "Mediterranean Sea",
-    "Description": "This location is the very first location that you will start your journey as a fisherman",
-    "LevelRequirement": 1,
-    "ExperienceMultiplier": 1.0
-    
-},
 
-{
-    "Name": "Atlantic Ocean",
-    "Description": "This location is one of the largest oceans in the world, second only to the Pacific Ocean. It is home to a wide variety of fish species.",
-    "LevelRequirement": 25,
-    "ExperienceMultiplier": 1.25
-},
-{
-    "Name": "Arctic Ocean", 
-    "Description": "This frigid, ice-covered location is home to some of the hardiest and most unique fish species in the world.", 
+[
+  { 
+    "Name": "Mangrove Lagoon", 
+    "Description": "Your fishing journey begins in these calm, root-tangled waters. It is the perfect nursery ground for a novice angler to learn the ropes.", 
+    "LevelRequirement": 1, 
+    "ExperienceMultiplier": 1.0 
+  }, 
+  { 
+    "Name": "The Grand Horizon", 
+    "Description": "The shoreline fades completely out of sight in this massive, open-water expanse. A diverse paradise of mid-tier game fish awaits those brave enough to sail here.", 
+    "LevelRequirement": 25, 
+    "ExperienceMultiplier": 1.25 
+  }, 
+  { 
+    "Name": "Absolute Zero", 
+    "Description": "A brutal, ice-locked wasteland where the water itself defies freezing. Only the hardiest anglers can survive to pull legendary, frost-adapted species from beneath the ice shelves.", 
     "LevelRequirement": 50, 
-    "ExperienceMultiplier": 2
-},
-
-{
-    "Name": "Pacific Ocean",
-    "Description": "This location is the largest ocean in the world, it is home to a wide variety of fish species, including some of the most sought-after game fish.",
-    "LevelRequirement": 75,
-    "ExperienceMultiplier": 3.25
-}
+    "ExperienceMultiplier": 2.0 
+  }, 
+  { 
+    "Rame": "The Deep Abyss", 
+    "Description": "Pitch-black waters plunging into the planet's lowest depths. This crushing, alien environment holds the ultimate prize: colossal, bioluminescent game fish sought by masters.", 
+    "LevelRequirement": 75, 
+    "ExperienceMultiplier": 3.25 
+  } 
+>>>>>>> origin/FishClass
 ]
