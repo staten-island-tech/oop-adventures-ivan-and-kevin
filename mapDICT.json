@@ -1,5 +1,5 @@
 [{
-    "Name": "1. Mediterranean Sea",
+    "Name": "Mediterranean Sea",
     "Description": "This location is the very first location that you will start your journey as a fisherman",
     "LevelRequirement": 1,
     "ExperienceMultiplier": 1.0
@@ -7,20 +7,20 @@
 },
 
 {
-    "Name": "2. Atlantic Ocean",
+    "Name": "Atlantic Ocean",
     "Description": "This location is one of the largest oceans in the world, second only to the Pacific Ocean. It is home to a wide variety of fish species.",
     "LevelRequirement": 25,
     "ExperienceMultiplier": 1.25
 },
 {
-    "Name": "3. Arctic Ocean", 
+    "Name": "Arctic Ocean", 
     "Description": "This frigid, ice-covered location is home to some of the hardiest and most unique fish species in the world.", 
     "LevelRequirement": 50, 
     "ExperienceMultiplier": 2
 },
 
 {
-    "Name": "4. Pacific Ocean",
+    "Name": "Pacific Ocean",
     "Description": "This location is the largest ocean in the world, it is home to a wide variety of fish species, including some of the most sought-after game fish.",
     "LevelRequirement": 75,
     "ExperienceMultiplier": 3.25

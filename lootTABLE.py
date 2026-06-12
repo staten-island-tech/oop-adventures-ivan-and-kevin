@@ -69,7 +69,7 @@ def new_lootMULT(luckMULTIPLERS):
 
     select = random.choices(nameLIST, weights=rareWEIGHT, k = 1)
     return select
-
+fishSELECTED = new_lootMULT(calculator.mult(luckFACT))
 
 
 def fishWEIGHT(fishSELECT):
@@ -77,7 +77,7 @@ def fishWEIGHT(fishSELECT):
         if fishSELECT[0] in data[count]["name"]:
             weight = random.randint(data[count]["minWEIGHT"], data[count]["maxWEIGHT"])
             return weight
-
+weightrand = fishWEIGHT(fishSELECTED)
 
 def fishRARITY(fishSELECT):
     for count in range(data[-1]["id"]):
