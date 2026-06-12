@@ -3,9 +3,11 @@ import json
 fishDICT = open("./fishDICT.json", encoding="utf8")
 rodDICT = open("./rodDICT.json", encoding="utf8")
 baitDICT = open("./baitDICT.json", encoding="utf8")
+mapDICT = open("./mapDICT.json", encoding="utf8")
 data = json.load(fishDICT)
 rodDATA = json.load(rodDICT)
 baitDATA = json.load(baitDICT)
+mapDATA = json.load(mapDICT)
 import random
 import math
 class calculator():
@@ -46,7 +48,7 @@ for item in data:
 select = random.choices(nameLIST, weights=rareWEIGHT, k = 10)
 print(select) """
 # Loot selection with Multipliers
-""" luckFACT = [1, 1]
+luckFACT = [1, 1]
 def new_lootMULT(luckMULTIPLERS):
     rareWEIGHT = []
     nameLIST = []
@@ -141,29 +143,42 @@ class EXPbar():
     def lvl76to99(nxtLVL, curtLVL):
         return nxtLVL ** 3.25 + (curtLVL ** 2.25 - 2 * curtLVL)
     def lvl99to100(nxtLVL, curtLVL):
-        return nxtLVL ** 3.65 + (curtLVL ** 2.455 - 2 * curtLVL) """
-
+        return nxtLVL ** 3.65 + (curtLVL ** 2.455 - 2 * curtLVL)
 
 
 
     
 
-rodSHOP = {}
+
 def dictROD(rods):
+    rodSHOP = {}
     for rod in rods:
-        if rod["name"] not in dictROD:
-            dictROD[rod["name"]] = {
-                "name":rod["name"]
+        if rod["name"] not in rodSHOP: 
+            rodSHOP[rod["name"]] = { 
+                "Description": rod["description"], 
+                "Price": rod["price"], 
+                "Rarity": rod["rarity"], 
+                "ExperienceMultiplier": rod["experience_multiplier"], 
+                "LuckMultiplier": rod["luck_multiplier"] 
             }
-        if rod[""] not in dictROD:
-            dictROD[rod["name"]] = {
-                "Description":rod["description"],
-                "Price":rod["price"],
-                "Rarity":rod["rarity"],
-                "ExperienceMultiplier":rod["experience_multiplier"],
-                "LuckMultiplier":rod["luck_multiplier"]
-            }
-    return dictROD
-dictROD(rodDATA)
-for key, value in rodDATA.items():
-    print(key, "→", value)
+    return rodSHOP
+rodSHOP = dictROD(rodDATA) 
+def displayRODSHOP(rodSHOP):
+    for key, value in rodSHOP.items():
+        print(f"Name: {key}")
+        print(f"Description: {value['Description']}")
+        print(f"Price: {value['Price']} coins")
+        print(f"Rarity: {value['Rarity']}")
+        print(f"ExperienceMultiplier: {value['ExperienceMultiplier']}x")
+        print(f"LuckMultiplir: {value['LuckMultiplier']}x")
+        print()
+displayRODSHOP(rodSHOP)
+
+def displayMAPS(mapDATA):
+    # 1. Loop through the list to grab each map dictionary
+    for map_dict in mapDATA:
+        # 2. Use .items() on the dictionary, NOT the list
+        for key, value in map_dict.items():
+            print(f"{key}: {value}")
+        print( )
+displayMAPS(mapDATA)

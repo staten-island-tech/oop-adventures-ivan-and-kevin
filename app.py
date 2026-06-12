@@ -1,9 +1,24 @@
+import json
+import random
+import math
+fishDICT = open("./fishDICT.json", encoding="utf8")
+rodDICT = open("./rodDICT.json", encoding="utf8")
+baitDICT = open("./baitDICT.json", encoding="utf8")
+data = json.load(fishDICT)
+rodDATA = json.load(rodDICT)
+baitDATA = json.load(baitDICT)
+
+
+
 from lootTABLE import new_lootMULT
 from lootTABLE import fishWEIGHT
 from lootTABLE import fishRARITY
 from lootTABLE import expCALC
 from lootTABLE import moneyCALC
 from lootTABLE import calculator
+from lootTABLE import dictROD
+
+
 class Fisherman:
     def __init__(self, name, money, experience, inventory):
         self.name = name
@@ -33,17 +48,10 @@ class Fisherman:
             print(f"{self.name} does not have enough money to buy the equipment.")
   
 
-def startUP(user_name):
-    user_name = Fisherman(user_name, money=100, experience=0, inventory={})
-    actONE = ("First lets head to the market to buy a fishing rod! Press 1 to continue.")
-    if int(actONE) == 1:
-        
-    return user_name
-playerSTATS = startUP(input(" Welcome to x! Enter the name of your fisherman!"))
-def play():
 
-    
-    while playerSTATS.experience != 100:
+def play(user_name):
+    user_name = Fisherman(user_name, money=100, experience=0, inventory={})
+    while user_name.experience != 100:
         action = input("What would you like to do? "  
         "  1: Fish"
         "  2: Go to Market"
