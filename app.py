@@ -91,7 +91,7 @@ def play(user_name):
             if mapSELECTED != 0:
                 fishACT = input("1. Cast Your Rod 2. Select your bait 3. Leave")
                 if int(fishACT) == 1:
-                    luckFACTS = [1,2]
+                    luckFACTS = [Selected Rod, Selected Bait]
                     fishSELECTED = new_lootMULT(calculator.mult(luckFACTS))
                     weightrand = fishWEIGHT(fishSELECTED)
                     rarerand = fishRARITY(fishSELECTED)
