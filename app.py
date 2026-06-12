@@ -88,10 +88,18 @@ def play(user_name):
             calcMONEY = 0
             weightrand = 0
             rarerand = 0
+            baitSELECTED = ["No Bait"]
+            rodSELECTED = ["No rod"]
+            luckFACTS = []
             if mapSELECTED != 0:
-                fishACT = input("1. Cast Your Rod 2. Select your bait 3. Leave")
+                fishACT = input("1. Cast Your Rod 2. Select your bait 3. Select Your rod4. Leave")
                 if int(fishACT) == 1:
-                    luckFACTS = [Selected Rod, Selected Bait]
+                    for bait in baitDATA:
+                        if baitSELECTED in baitDATA:
+                            luckFACTS.append(baitDATA[bait]["luck_multiplier"])
+                    for rod in rodDATA:
+                        if rodSELECTED in rodDATA:
+                            luckFACTS.append(rodDATA[rod]["luck_multiplier"])
                     fishSELECTED = new_lootMULT(calculator.mult(luckFACTS))
                     weightrand = fishWEIGHT(fishSELECTED)
                     rarerand = fishRARITY(fishSELECTED)
@@ -102,6 +110,23 @@ def play(user_name):
                 elif int(fishACT) == 2:
                     user_name.openIN()
                     baitSELECT = input("What bait would you like to use?")
+                    user_name.openIN()
+                    if baitSELECT not in baitDATA:
+                        print("Invalid Bait")
+                    else:
+                        baitSELECTED.pop(0)
+                        baitSELECTED.append(baitSELECT)
+                elif int(fishACT) == 3:
+                    user_name.openIN()
+                    rodSELECT = input("What rod would you like to use?")
+                    user_name.openIN()
+                    if rodSELECT not in rodDATA:
+                        print("Invalid ROD")
+                    else:
+                        baitSELECTED.pop(0)
+                        baitSELECTED.append(rodSELECT)
+
+
                     
 
         elif int(action) == 2:
@@ -141,7 +166,7 @@ def play(user_name):
                             buyACT = input("What else would you like to buy? (Type 5 to end shopping): ")
                         if buyACT == "5":
                             print("Thank you for shopping!")
-                        break
+                        
                 elif int(dialogue) == 2:
                     print("You leave the shop and head back to the main area.")
             elif int(marketACT) == 2:
@@ -201,5 +226,5 @@ def play(user_name):
                 print("INVALID NUMBER")
         elif int(action) == 5: 
             user_name.openIN()
-play(input("Enter the name of the fisherman: "))
+play(input("Enter the name of the fisherman(To start go to the market to a common rod): "))
 
