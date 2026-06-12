@@ -72,7 +72,7 @@ class Fisherman:
 
 def play(user_name):
     user_name = Fisherman(user_name, money=100, experience=0, inventory={}, level=1)
-    mapSELECTED = 'Mediterranean Sea'
+    mapSELECTED = ['Mediterranean Sea']
     
     while user_name.level != 100:
         print("Main Menu")
@@ -101,6 +101,7 @@ def play(user_name):
                     print( )
                 elif int(fishACT) == 2:
                     user_name.openIN()
+                    baitSELECT = input("What bait would you like to use?")
                     
 
         elif int(action) == 2:
@@ -167,25 +168,35 @@ def play(user_name):
         elif int(action) == 3:
             displayMAPS(mapDATA)
             map_selection = input("Select A Map(Enter the Number)!")
-            indexNUM = int(map_selection) - 1
+            indexNUM = int(map_selection)-1
 
             if 0 <= indexNUM < len(mapDATA):
-                mapSELECTED.remove[0]
-                mapSELECTED.append[mapDATA[indexNUM]]
-
-                print(f"You ahve arrived at {mapSELECTED[0]['name']}")
+    
+                if mapSELECTED:
+                    mapSELECTED.pop(0)  
+                    mapSELECTED.append(mapDATA[indexNUM])  
+    
+   
+                current_map = mapSELECTED[0]
+    
+   
+                if user_name.level >= current_map["LevelRequirement"]:
+                    print(f"You have arrived at {current_map['Name']}")
+        
+                else:
+                    print(f"You do not have the level required. You need level {current_map['LevelRequirement']}.")
+                    mapSELECTED.pop(0) 
             else:
                 print("Invalid number")
-        
             
         elif int(action) == 4:
             choiceSTATS = input("What would you like to view? 1. LVL 2. COINS 3. EXP")
             if int(choiceSTATS) == 1:
-                print(user_name.level)
+                print(f"You are level {user_name.level}")
             elif int(choiceSTATS) == 2:
-                print(user_name.money)
+                print(f"You have {user_name.money} coins")
             elif int(choiceSTATS) == 3:
-                print(user_name.experience)
+                print(f"You have {user_name.experience} points")
             else:
                 print("INVALID NUMBER")
         elif int(action) == 5: 

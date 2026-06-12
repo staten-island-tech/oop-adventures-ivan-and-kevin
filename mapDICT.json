@@ -19,10 +19,10 @@
     "ExperienceMultiplier": 2.0 
   }, 
   { 
-    "Rame": "The Deep Abyss", 
+    "Name": "The Deep Abyss", 
     "Description": "Pitch-black waters plunging into the planet's lowest depths. This crushing, alien environment holds the ultimate prize: colossal, bioluminescent game fish sought by masters.", 
     "LevelRequirement": 75, 
     "ExperienceMultiplier": 3.25 
   } 
->>>>>>> origin/FishClass
+
 ]
