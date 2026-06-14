@@ -62,8 +62,10 @@ class Fisherman:
         if self.money >= cost:
             self.money -= cost
             print(f"{self.name} has bought a {item}.")
+            return True
         else:
             print(f"{self.name} does not have enough money to buy the equipment.")
+            return False
 
         
     
@@ -71,9 +73,10 @@ class Fisherman:
 
 
 def play(user_name):
-    user_name = Fisherman(user_name, money=100, experience=0, inventory={}, level=1)
+    user_name = Fisherman(user_name, money=101, experience=0, inventory={}, level=1)
     mapSELECTED = ['Mangrove Lagoon']
-    
+    baitSELECTED = "No Bait"
+    rodSELECTED = "No rod"
     while user_name.level != 100:
         print("Main Menu")
         print("1. Fishing")
@@ -88,93 +91,115 @@ def play(user_name):
             calcMONEY = 0
             weightrand = 0
             rarerand = 0
-            baitSELECTED = ["No Bait"]
-            rodSELECTED = ["No rod"]
             luckFACTS = []
+    
             if mapSELECTED != 0:
-                fishACT = input("1. Cast Your Rod 2. Select your bait 3. Select Your rod4. Leave")
+                fishACT = input("1. Cast Your Rod\n2. Select your bait\n3. Select Your rod\n4. Leave\nChoice: ")
+        
                 if int(fishACT) == 1:
-                    if rodSELECTED not in rodDATA:
-                        print("Select A Rod")
+
+                    if rodSELECTED == "No rod":
+                        print("Select A Rod first!")
                     else:
-                        for bait in baitDATA:
-                            if baitSELECTED in baitDATA:
-                                luckFACTS.append(baitDATA[bait]["luck_multiplier"])
-                        for rod in rodDATA:
-                            if rodSELECTED in rodDATA:
-                                luckFACTS.append(rodDATA[rod]["luck_multiplier"])
+                
+                        if baitSELECTED in baitDATA:
+                            luckFACTS.append(baitDATA[baitSELECTED]["luck_multiplier"])
+                        if rodSELECTED in rodDATA:
+                            luckFACTS.append(rodDATA[rodSELECTED]["luck_multiplier"])
+                
                         fishSELECTED = new_lootMULT(calculator.mult(luckFACTS))
                         weightrand = fishWEIGHT(fishSELECTED)
                         rarerand = fishRARITY(fishSELECTED)
                         calcEXP = expCALC(fishSELECTED)
                         calcMONEY = moneyCALC(fishSELECTED)
+                
                         user_name.fish(calcEXP, fishSELECTED[0])
                         print()
+                
                 elif int(fishACT) == 2:
-                    user_name.openIN()
-                    baitSELECT = input("What bait would you like to use?")
-                    user_name.openIN()
-                    if baitSELECT not in baitDATA:
-                        print("Invalid Bait")
+                    user_name.openIN()  
+                    baitSELECT = input("What bait would you like to use? ")
+            
+            
+                    if baitSELECT not in user_name.inventory:
+                        print("You don't own that bait! Buy it at the market first.")
                     else:
-                        baitSELECTED.pop(0)
-                        baitSELECTED.append(baitSELECT)
+                        baitSELECTED = baitSELECT  
+                        print(f"Equipped {baitSELECTED}!")
+                
                 elif int(fishACT) == 3:
-                    user_name.openIN()
-                    rodSELECT = input("What rod would you like to use?")
-                    user_name.openIN()
-                    if rodSELECT not in rodDATA:
-                        print("Invalid ROD")
+                    user_name.openIN()  
+                    rodSELECT = input("What rod would you like to use? ")
+            
+            
+                    if rodSELECT not in user_name.inventory:
+                        print("You don't own that rod! Buy it at the market first.")
                     else:
-                        baitSELECTED.pop(0)
-                        baitSELECTED.append(rodSELECT)
+                        rodSELECTED = rodSELECT  
+                        print(f"Equipped {rodSELECTED}!")
+
 
 
                     
 
         elif int(action) == 2:
-            marketACT = input("What would you like to do at the market? 1. Buy 2. Sell")
+            marketACT = input("What would you like to do at the market? 1. Buy 2. Sell: ")
+    
             if int(marketACT) == 1:
-                shopowner = []
-                shopowner.append("[Shop Owner Fin Hook]: Wipe your boots, kid. You're tracking lake water all over my floor. Looking for a rod that won't snap on a real catch, or are you just wasting my daylight? ")
-                shopowner.append("[Shop Owner Fin Hook]: Buy something useful today. If I see you fishing with a stick and string again, I will laugh.")
-                shopowner.append("[Shop Owner Fin Hook]: Back from the water empty-handed, I see. Let me guess, the big one got away?")
+                shopowner = [
+                    "[Shop Owner Fin Hook]: Wipe your boots, kid. You're tracking lake water all over my floor. Looking for a rod that won't snap on a real catch, or are you just wasting my daylight?",
+                    "[Shop Owner Fin Hook]: Buy something useful today. If I see you fishing with a stick and string again, I will laugh.",
+                    "[Shop Owner Fin Hook]: Back from the water empty-handed, I see. Let me guess, the big one got away?"
+                ]
                 print(random.choice(shopowner))
-                dialogue = input("Type 1 to view catolag. Type 2 to leave.")
-                if int(dialogue) == 1:
-                        print("RODS")
-                        rodSHOP = dictROD(rodDATA)
-                        displayRODSHOP(rodSHOP)
-                        print("BAITS")
-                        baitSHOP = dictBAIT(baitDATA)
-                        displayBAITSHOP(baitSHOP)
-                
-                        buyACT = input("What would you like to buy? (Type 5 to end shopping): ")
-                        while buyACT != "5":
-                            if buyACT in rodSHOP:
-                                item_data = rodSHOP[buyACT]  
-                                item_cost = item_data['Price'] 
-    
-                                if user_name.buy_equipment(item_cost, buyACT):
-                                    user_name.inventory.append(buyACT)
-                                    for rod in rodDATA:
-                                        if buyACT not in rodDATA:
-                                            user_name.inventory[rod["name"]]
         
-                            elif buyACT in baitSHOP:
-                                item_data = baitSHOP[buyACT]  
-                                item_cost = item_data['Price']  
-    
-                                if user_name.buy_equipment(item_cost, buyACT):
-                                    user_name.inventory.append(buyACT)
-                            else:
-                                print("Invalid Please Try Again")
-                            buyACT = input("What else would you like to buy? (Type 5 to end shopping): ")
-                        if buyACT == "5":
-                            print("Thank you for shopping!")
+                dialogue = input("Type 1 to view catalog. Type 2 to leave: ")
+        
+                if int(dialogue) == 1:
+                    print("RODS")
+                    rodSHOP = dictROD(rodDATA)
+                    displayRODSHOP(rodSHOP)
+            
+                    print("BAITS")
+                    baitSHOP = dictBAIT(baitDATA)
+                    displayBAITSHOP(baitSHOP)
+            
+                    buyACT = input("\nWhat would you like to buy? (Type 5 to end shopping): ")
+            
+                    while buyACT != "5":
+                
+                        if buyACT in rodSHOP:
+                            item_data = rodSHOP[buyACT]
+                            item_cost = item_data['Price']
+                    
+                            if user_name.buy_equipment(item_cost, buyACT):
+                                if buyACT in user_name.inventory:
+                                    user_name.inventory[buyACT] += 1
+                                else:
+                                    user_name.inventory[buyACT] = 1
+
+                
+                        elif buyACT in baitSHOP:
+                            item_data = baitSHOP[buyACT]
+                            item_cost = item_data['Price']
+                    
+                            if user_name.buy_equipment(item_cost, buyACT):
+                                if buyACT in user_name.inventory:
+                                    user_name.inventory[buyACT] += 1
+                                else:
+                                    user_name.inventory[buyACT] = 1
                         
-                elif int(dialogue) == 2:
-                    print("You leave the shop and head back to the main area.")
+                        else:
+                            print("Invalid item. Please try again.")
+                    
+                        buyACT = input("What else would you like to buy? (Type 5 to end shopping): ")
+            
+                    if buyACT == "5":
+                        print("Thank you for shopping!")
+                
+            elif int(dialogue) == 2:
+                print("You leave the shop and head back to the main area.")
+
             elif int(marketACT) == 2:
                 seller = []
                 seller.append("[Greedy Gill]: Let's see if you actually caught anything this time. No minnows! Only real fish!")
