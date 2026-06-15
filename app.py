@@ -72,7 +72,7 @@ class Fisherman:
 
 def play(user_name):
     user_name = Fisherman(user_name, money=100, experience=0, inventory={}, level=1)
-    mapSELECTED = ['Mediterranean Sea']
+    mapSELECTED = ['Mangrove Lagoon']
     
     while user_name.level != 100:
         print("Main Menu")
